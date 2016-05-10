@@ -1,0 +1,37 @@
+{
+	"title": "SimulaPro",
+	"owner":"Fabian Enrique Gutierrez Angulo",
+	"description":"Sistemas de simulación en ambientes de universitarios",
+	"google-analytics":"",
+	"url":"http://simulapro.com",
+	"logo-png":"img/logo.png",
+	"logo-svg":"", 
+	"phone":"+57-300-355-6475",
+
+
+	"version":"1",
+	"subversion":"0",
+	"build":"0",
+
+
+	"google-plus":"",
+	"twitter":"",
+	"linkedin":"",
+	"share-img":"",
+	"share-title":"SimulaPro: ",
+	"share-description":"",
+
+
+	"theme":"#fff",
+
+	"primary"	   	:"#ffffff",
+	"primary-light"	:"#ffffff",
+	"primary-dark" 	:"#ffffff",
+	"primary-text" 	:"#000000",
+
+	"accent"		:"#ffffff",
+	"accent-text"	:"#ffffff",
+
+	"footer-color"	:"#ffffff",
+	"nav-color"		:"#ffffff" 
+}

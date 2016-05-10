@@ -1,0 +1,38 @@
+---
+title: SimulaPro 
+description: Simuladores de negocios, managemen y mas.
+parallax: img/parallax.jpg
+hero-title: Crea empresarios <br> de exito. 
+hero-subtitle: Usa nuestros simuladores para enseñarles habilidades <br> criticas para su desempeño 
+---
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<title>{{data.title}} | {{front.description}}</title>
+	<meta name="description" content="{{data.description}}">
+	{{>head}}
+	{{>style}}
+</head>
+<body>
+	{{>analytics}}
+	{{>nav}}
+
+	<div class="parallax-container">
+      	<div class="parallax"><img src="{{front.parallax}}"></div> 
+	    <div class="container">
+	    	<h1 class="white-text">{{{front.hero-title}}}</h1>
+	    	<h2>{{{front.hero-subtitle}}}</h2>
+	    </div>
+    </div>
+
+
+	{{>footer}}
+	<script src="/js/min.js"></script>
+	<script>
+	$(document).ready(function(){
+      $('.parallax').parallax();
+    });</script>
+	{{>microdatos}}
+</body>
+</html>

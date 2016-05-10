@@ -1,0 +1,34 @@
+---
+title: FeGA
+message: It's ready to start
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{data.title}} | {{front.title}}</title>
+	<meta name="description" content="{{data.description}}">
+	{{>head}}
+
+	<!-- CSS  -->
+	<link href="css/min.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href="css/print.css" type="text/css" rel="stylesheet" media="print" />
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+	{{>style}}
+</head>
+<body>
+	{{>analytics}}
+	{{>nav}}
+
+	
+	{{!contenido principal}}
+	<div class="container">
+		<h1 class="thin">{{front.title}} BoilerPlate</h1>
+		<p class="flow-text">It's ready to start</p>
+	</div>
+
+	{{>footer}}
+	<script src="/js/min.js"></script>
+	{{>microdatos}}
+</body>
+</html>
