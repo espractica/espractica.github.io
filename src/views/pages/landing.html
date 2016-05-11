@@ -1,9 +1,15 @@
 ---
+#main information
 title: SimulaPro 
 description: Simuladores de negocios, managemen y mas.
 parallax: img/parallax.jpg
-hero-title: Crea empresarios <br> de exito. 
+hero-title:  BusinessOne:<br> Crea empresarios de exito. 
 hero-subtitle: Usa nuestros simuladores para enseñarles habilidades <br> criticas para su desempeño 
+#actions
+action: Pedir demo
+sub-action: conoce mas
+#main navbar
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,23 +22,45 @@ hero-subtitle: Usa nuestros simuladores para enseñarles habilidades <br> critic
 </head>
 <body>
 	{{>analytics}}
-	{{>nav}}
+	{{>nav-landing}}
 
-	<div class="parallax-container">
+	<div class="parallax-container valign-wrapper">
       	<div class="parallax"><img src="{{front.parallax}}"></div> 
-	    <div class="container">
-	    	<h1 class="white-text">{{{front.hero-title}}}</h1>
-	    	<h2>{{{front.hero-subtitle}}}</h2>
-	    </div>
+      	<div class="container container-90">
+	    	<div class="row valign	left-align ">
+				<div class="col s12 l6 m7 dark ">
+	    			<h1 class="white-text center">{{{front.hero-title}}}</h1>
+	    			<h2 class="thin white-text center">{{{front.hero-subtitle}}}</h2>
+	    			<div class="row center">
+	    				<a class="waves-effect waves-light btn white accent-text">{{front.action}}</a>
+	    				<a href="" class="btn accent">{{front.sub-action}}</a>
+	    			</div>
+	    		</div>
+			</div>
+		</div>
+    </div>
+    <div class="container">
+    	<div class="row">
+    		<div class="col s12 l6 m6">
+    			<h2>¿Que es bussinessPro?</h2>
+    			<p class="flow-text">BusinessPro es una herramienta de simulacion empresarial.<br>Desarrolla estrategias, analiza informes, aprende a realizar inversiones y toma de decisiones empresariales</p>
+    		</div>
+    	</div>
     </div>
 
 
 	{{>footer}}
 	<script src="/js/min.js"></script>
 	<script>
+	function navActionBtn(){
+		$('#landingBtn').addClass('accent');
+	}
+	var scrollOptions = [{selector: '.parallax-container', offset: 1000, callback: navActionBtn} ];
 	$(document).ready(function(){
       $('.parallax').parallax();
-    });</script>
+      Materialize.scrollFire(scrollOptions);
+    });
+    </script>
 	{{>microdatos}}
 </body>
 </html>

@@ -5,10 +5,11 @@
 
 /*Fixed action button animation*/
 .btn-floating.btn-large i {
-    line-height: 57px;
+    line-height: 57px; 
 }
 .fixed-action-btn{
     -webkit-transition-timing-function: ease; /* Safari and Chrome */
+    -o-transition-timing-function:ease;
     transition-timing-function: ease;
    	transition: all 0.2s;
    	padding: 0px;
@@ -95,27 +96,25 @@ nav .button-collapse{
   display: list-item;
   
 }
-/* fallback */
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(./material.woff2) format('woff2');
+h1{
+  font-size: 3em;
 }
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px; 
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
+h2{
+  font-size: 2em;
 }
-
+div.full{
+  height: 1000px;
+  width: 100%;
+}
+div.container-90{
+  width: 90%;
+}
+nav, a.btn{
+  box-shadow:none ;
+  transition: background-color 2s ease;
+}
+.dark{
+  background-color: rgba(0,0,0,0.3) !important;
+  border-radius:4px;
+} 
 

@@ -30,6 +30,7 @@ Browser Sync Implementation
 ///////////////////////////////////////*/
 gulp.task('browser-sync', function() {
     browserSync.init({
+        tunnel:'mycutelanding',
         server: {
             baseDir: "./dist"
         }
@@ -63,7 +64,7 @@ gulp.task('jslint', function() {
 gulp.task('csslint', function() {
   gulp.src(['./src/css/style.css'])
     .pipe(csslint())
-    .pipe(csslint.reporter());
+    .pipe(csslint.reporter('compact'));
 });
 gulp.task('htmllint', function() {
   gulp.src(['./dist/*.html'])
@@ -112,6 +113,7 @@ gulp.task('img', function(){
     .pipe(plumberit('Img minification error'))
 	.pipe(cache(imagemin({interlaced: true})))// Caching images that ran through imagemin
 	.pipe(gulp.dest('dist/img'))
+    .pipe(browserSync.reload({ stream: true }));
 });
 /*///////////////////////////////////////
 copy fonts
@@ -134,7 +136,7 @@ WATCHER
 gulp.task('default', ['browser-sync','js','css','build','svg','img'], function () {
 	gulp.watch(['./src/js/*.js'],   ['js','jslint']);
 	gulp.watch('./src/**/*.css',  ['css','csslint']);
-	gulp.watch('./dist/**/*.html', ['bs-reload','htmllint']);
+	gulp.watch('./dist/**/*.html', ['htmllint']);
 	gulp.watch(['./src/views/**/*'], ['build']);
 	gulp.watch('./src/**/*.svg', ['svg']);
 	gulp.watch('src/**/*.+(png|jpg|jpeg|gif)', ['img']);
