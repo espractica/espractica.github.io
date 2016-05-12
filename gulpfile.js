@@ -45,7 +45,7 @@ gulp.task('build',   function () {
         .pipe(plumberit('Build Error'))
         .pipe(frontMatter({property: 'data.front' }))
         .pipe(hb({partials: './src/views/partials/*.hbs',data: './src/views/data.json',debug:0}))
-        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(htmlmin({collapseWhitespace: true,minifyCSS:true,minifyJS:true,removeComments:true}))
         .pipe(gulp.dest('./dist'))
         .pipe(browserSync.reload({ stream: true }));
 });

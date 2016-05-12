@@ -136,16 +136,16 @@ quote-img: img/city.jpg
 				</div>
 				<div class="col s12 m4 l3 hide-on-small-only">
 					<div class="row">
-						<a href="" class="btn accent active white-text">{{front.extra-btn1}}</a>
+						<a id="extra-btn1" class="btn accent active white-text">{{front.extra-btn1}}</a>
 					</div>
 					<div class="row">
-						<a href="" class="btn accent white-text">{{front.extra-btn2}}</a>
+						<a id="extra-btn2" class="btn accent white-text">{{front.extra-btn2}}</a>
 					</div>
 					<div class="row">
-						<a href="" class="btn accent white-text">{{front.extra-btn3}}</a>
+						<a id="extra-btn3" class="btn accent white-text">{{front.extra-btn3}}</a>
 					</div>
 					<div class="row">
-						<a href="" class="btn accent white-text">{{front.extra-btn4}}</a>
+						<a id="extra-btn4" class="btn accent white-text">{{front.extra-btn4}}</a>
 					</div>
 				</div>
 				<div class="col s12 m4 l3 hide-on-med-and-up center">
@@ -209,6 +209,12 @@ quote-img: img/city.jpg
       Materialize.scrollFire(scrollOptions);
       $("#nav-mobile").removeClass("hidden"); 
     });
+	$('#extra-btn1').click(function(){	
+	})
+
+
+
+
     </script>
 	{{>microdatos}}
 </body>
