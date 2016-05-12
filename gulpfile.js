@@ -30,7 +30,7 @@ Browser Sync Implementation
 ///////////////////////////////////////*/
 gulp.task('browser-sync', function() {
     browserSync.init({
-        tunnel:'mycutelanding',
+        //tunnel:'mycutelanding',
         server: {
             baseDir: "./dist"
         }
@@ -138,6 +138,6 @@ gulp.task('default', ['browser-sync','js','css','build','svg','img'], function (
 	gulp.watch('./src/**/*.css',  ['css','csslint']);
 	gulp.watch('./dist/**/*.html', ['htmllint']);
 	gulp.watch(['./src/views/**/*'], ['build']);
-	gulp.watch('./src/**/*.svg', ['svg']);
+	gulp.watch('./src/img/**/*.svg', ['svg']);
 	gulp.watch('src/**/*.+(png|jpg|jpeg|gif)', ['img']);
 });

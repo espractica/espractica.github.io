@@ -102,6 +102,9 @@ h1{
 h2{
   font-size: 2em;
 }
+h3{
+  font-size: 1.8em;
+}
 div.full{
   height: 1000px;
   width: 100%;
@@ -117,4 +120,16 @@ nav, a.btn{
   background-color: rgba(0,0,0,0.3) !important;
   border-radius:4px;
 } 
-
+.landing{
+  margin-top:26.700px;
+  position: relative;
+}
+.landing img.absolute {
+  position:absolute;
+}
+.hidden{
+  visibility: hidden;
+}
+.thin {
+    font-weight: 200 !important;
+}

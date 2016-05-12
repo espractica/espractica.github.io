@@ -3746,7 +3746,7 @@ $(document).ready(function(){
     var element = $(selector);
     element.css({opacity: 0});
     $(element).velocity({opacity: 1}, {
-        duration: 650,
+        duration: 250, 
         queue: false,
         easing: 'easeOutSine'
       });

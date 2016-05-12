@@ -14,15 +14,15 @@
 	"build":"0",
 
 
-	"google-plus":"",
-	"twitter":"",
-	"linkedin":"",
-	"share-img":"",
+	"google-plus":"http://hola.com",
+	"twitter":"http://hola.com",
+	"linkedin":"http://hola.com",
+	"share-img":"shareimg",
 	"share-title":"SimulaPro: ",
-	"share-description":"",
+	"share-description":"Sistemas de simulación en ambientes de universitarios",
 
 
-	"theme":"#fff",
+	"theme":"#3F5FFF",
 
 	"primary"	   	:"#ffffff",
 	"primary-light"	:"#ffffff",

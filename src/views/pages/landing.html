@@ -1,21 +1,31 @@
 ---
 #main information
-title: SimulaPro 
+title: BusinessPro 
 description: Simuladores de negocios, managemen y mas.
 parallax: img/parallax.jpg
-hero-title:  BusinessOne:<br> Crea empresarios de exito. 
+hero-title:  BusinessPro:<br> Crea empresarios de exito. 
 hero-subtitle: Usa nuestros simuladores para enseñarles habilidades <br> criticas para su desempeño 
 #actions
 action: Pedir demo
 sub-action: conoce mas
-#main navbar
+#tri-list section
+subtitle1: Compite en ambientes realistas
+image1: img/icons/money
+description1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero mollitia, animi eaque eum magnam natus. Maxime magnam unde reiciendis consectetur quis id sequi natus perspiciatis libero, asperiores, iure aperiam mollitia!
 
+subtitle2: Optimiza el tiempo
+image2: img/icons/time
+description2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur non ipsa illum, fugit velit ipsum labore unde? Perferendis officiis soluta sit non consequuntur laboriosam ad, beatae, quas delectus provident odio! 
+
+subtitle3: Conoce tus estudiantes
+image3: img/icons/student
+description3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae beatae tempore, nesciunt porro. Voluptatem nulla veritatis odit voluptatibus tenetur possimus, culpa dignissimos non maxime minus mollitia laudantium aliquam, deleniti reprehenderit!
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head> 
 	<meta charset="UTF-8">
-	<title>{{data.title}} | {{front.description}}</title>
+	<title>{{data.title}} | {{front.title}} | {{front.description}}</title>
 	<meta name="description" content="{{data.description}}">
 	{{>head}}
 	{{>style}}
@@ -25,7 +35,7 @@ sub-action: conoce mas
 	{{>nav-landing}}
 
 	<div class="parallax-container valign-wrapper">
-      	<div class="parallax"><img src="{{front.parallax}}"></div> 
+      	<div class="parallax"><img alt="landing {{front.title}} heroshot" src="{{front.parallax}}"></div> 
       	<div class="container container-90">
 	    	<div class="row valign	left-align ">
 				<div class="col s12 l6 m7 dark ">
@@ -39,27 +49,95 @@ sub-action: conoce mas
 			</div>
 		</div>
     </div>
-    <div class="container">
-    	<div class="row">
-    		<div class="col s12 l6 m6">
-    			<h2>¿Que es bussinessPro?</h2>
-    			<p class="flow-text">BusinessPro es una herramienta de simulacion empresarial.<br>Desarrolla estrategias, analiza informes, aprende a realizar inversiones y toma de decisiones empresariales</p>
-    		</div>
-    	</div>
+    <div class="section">
+    <div class="container section"> 
+	    	<div class="row">
+	    		<div class="col s12 l6 m6">
+	    			<h2>¿Que es {{front.title}}?</h2>
+	    			<p class="flow-text">BusinessPro es una herramienta de simulacion empresarial.<br>Desarrolla estrategias, analiza informes, aprende a realizar inversiones y toma de decisiones empresariales</p>
+	    		</div>
+	    		<div class="col s12 l6 m6">
+	    			<div class="landing">
+	    				<img src="img/landing-business1-sub2.svg"  alt="BussinessPro ejemplo"  class="responsive-img absolute"> 
+						<!-- <img src="img/landing-business1-sub1.svg" alt="BussinessPro ejemplo"  class="responsive-img absolute"> -->	    				
+						<img src="img/landing-business1.svg" alt="BussinessPro ejemplo" class="responsive-img">
+	    				
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
     </div>
-
+    <div class="accent">
+	    <div class="container section">
+	    <div class="row"><h2 class="center white-text">Ventajas de usar {{front.title}}</h2></div>
+	    	<div class="row hidden" id="ventaja-1">
+	    		<div class="col s12 l3 m4 center">
+	    			<img src="{{front.image1}}.svg" alt="{{front.subtitle1}}"  class="landing white circle responsive-img absolute">
+	    		</div>
+	    		<div class="col s12 l9 m8">
+	    			<h3 class="white-text">{{front.subtitle1}}</h3>
+	    			<p class="flow-text white-text thin">{{front.description1}}</p>
+	    		</div>
+	    	</div>
+	    	<div class="row hidden" id="ventaja-2">
+	    		<div class="col s12 l3 m4 center">
+	    			<img src="{{front.image2}}.svg" alt="{{front.subtitle2}}"  class="landing white circle responsive-img absolute">
+	    		</div>
+	    		<div class="col s12 l9 m8">
+	    			<h3 class="white-text">{{front.subtitle2}}</h3>
+	    			<p class="flow-text white-text thin">{{front.description2}}</p>
+	    		</div>
+	    	</div>
+	    	<div class="row hidden" id="ventaja-3">
+	    		<div class="col s12 l3 m4 center"><img src="{{front.image3}}.svg" alt="{{front.subtitle3}}"  class="landing white circle responsive-img absolute"></div>
+	    		<div class="col s12 l9 m8">
+	    			<h3 class="white-text">{{front.subtitle3}}</h3>
+	    			<p class="flow-text white-text thin">{{front.description3}}</p>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
 
 	{{>footer}}
 	<script src="/js/min.js"></script>
 	<script>
+	 //$(".button-collapse").sideNav();
 	function navActionBtn(){
 		$('#landingBtn').addClass('accent');
 	}
-	var scrollOptions = [{selector: '.parallax-container', offset: 1000, callback: navActionBtn} ];
+	var scrollOptions = [{	selector: '.parallax-container', 
+							offset: 1000, 
+							callback: navActionBtn
+						},
+						{	selector: '#ventaja-1', 
+							offset: 000, 
+							callback: function() { 
+								Materialize.fadeInImage("#ventaja-1"); 
+								$("#ventaja-1").removeClass("hidden"); 
+							} 
+						},{	selector: '#ventaja-2', 
+							offset: 000, 
+							callback: function() { 
+								Materialize.fadeInImage("#ventaja-2"); 
+								$("#ventaja-2").removeClass("hidden"); 
+							} 
+						},{	selector: '#ventaja-3', 
+							offset: 000, 
+							callback: function() { 
+								Materialize.fadeInImage("#ventaja-3"); 
+								$("#ventaja-3").removeClass("hidden"); 
+							} 
+						}];
+
 	$(document).ready(function(){
       $('.parallax').parallax();
       Materialize.scrollFire(scrollOptions);
+      $("#nav-mobile").removeClass("hidden"); 
     });
+
+
+
+    var options = [ {selector: '#staggered-test', offset: 50, callback: function() { Materialize.toast("This is our ScrollFire Demo!", 1500 ); } }, {selector: '#staggered-test', offset: 205, callback: function() { Materialize.toast("Please continue scrolling!", 1500 ); } }, {selector: '#staggered-test', offset: 400, callback: function() { Materialize.showStaggeredList("#staggered-test"); } }, {selector: '#image-test', offset: 500, callback: function() { Materialize.fadeInImage("#image-test"); } } ]; Materialize.scrollFire(options); 
     </script>
 	{{>microdatos}}
 </body>
