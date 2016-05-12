@@ -29,7 +29,8 @@
 	"primary-dark" 	:"#ffffff",
 	"primary-text" 	:"#000000",
 
-	"accent"		:"#3F5FFF",
+	"accent"		:"#3F5FFF", 
+	"accent-dark"	:"#101840",
 	"accent-text"	:"#3F5FFF",
 
 	"footer-color"	:"#ffffff",

@@ -114,10 +114,23 @@ div.container-90{
 }
 nav, a.btn{
   box-shadow:none ;
-  transition: background-color 2s ease;
+  transition: all 0.8s ease;
+}
+a.btn{
+  position: relative;
+  margin: 2px;
+  margin-right: 2px;
+}
+a.btn.active::after{
+  content: '';  
+  position: absolute;
+  left: -34px;
+  top:6px;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
 }
 .dark{
-  background-color: rgba(0,0,0,0.3) !important;
+  background-color: rgba(0,0,0,0.5) !important;
   border-radius:4px;
 } 
 .landing{
@@ -132,4 +145,10 @@ nav, a.btn{
 }
 .thin {
     font-weight: 200 !important;
+}
+.author{
+  text-align: right;
+}
+nav{
+  border-bottom: 1px solid #eceff1; 
 }

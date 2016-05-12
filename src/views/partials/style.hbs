@@ -18,6 +18,9 @@
 .accent{
 	background-color: {{data.accent}} !important;
 } 
+.accent-dark{
+	background-color: {{data.accent-dark}} !important;
+} 
 .accent-text{
 	color: {{data.accent-text}} !important;
 }
@@ -75,5 +78,15 @@ footer{
 
 nav{
 	background-color: {{data.nav-color}}   !important;
-}  	
+}
+a.btn.active::after{
+  border-right:23px solid {{data.accent}};   
+}
+a.btn:hover{
+	background-color: {{data.accent-dark}} !important;
+	color: white !important;
+	}
+.parallax{
+  background-color: #{{data.accent-dark}} ;
+}
 </style>
