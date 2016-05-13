@@ -2,7 +2,7 @@
 ###################
 #main information
 ###################
-title: Waterwork 
+title: BusinessPro 
 description: Simuladores de negocios, managemen y mas.
 parallax: img/parallax.jpg
 hero-title:  BusinessPro:<br> Crea empresarios de exito. 
@@ -34,7 +34,10 @@ description3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae be
 #Extra section
 ###################
 extra-title: Alcances del simulador
-extra-content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque vero mollitia, recusandae debitis. Expedita tempore nostrum deleniti voluptas, recusandae, quas hic! Qui blanditiis provident aliquam, placeat nemo id vitae.
+extra-content1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque vero mollitia, recusandae debitis. Expedita tempore nostrum deleniti voluptas, recusandae, quas hic! Qui blanditiis provident aliquam, placeat nemo id vitae.
+extra-content2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique excepturi nihil dolorum architecto, id veniam molestias perspiciatis nam repellat, sed. Numquam, cupiditate autem quas ea rerum nihil explicabo nobis! Laborum!
+extra-content3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quam voluptatem veritatis cum distinctio sunt similique nihil enim deserunt fuga adipisci minus sint aperiam repellat labore commodi, earum delectus nostrum.
+extra-content4: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab inventore maiores natus, quis dicta aspernatur dolor iusto quasi amet ratione, voluptas quibusdam. Quo reiciendis obcaecati nostrum, autem nam expedita quia.
 extra-btn1: Management
 extra-btn2: entrepreneurship
 extra-btn3: Exportaciones
@@ -131,9 +134,27 @@ quote-img: img/city.jpg
 				</div>
 			</div>
 			<div class="row">
-				<div class="col s12 m8 l9">
-				<p class="flow-text">{{{front.extra-content}}}</p>
+			{{!Botones para pantallas Pequeñas}}
+				<div class="col s12 m4 l3 hide-on-med-and-up center">
+						<a id="extra-mini-btn1" class="btn accent white-text">{{front.extra-btn1}}</a>
+						<a id="extra-mini-btn2" class="btn accent white-text">{{front.extra-btn2}}</a>
+						<a id="extra-mini-btn3" class="btn accent white-text">{{front.extra-btn3}}</a>
+						<a id="extra-mini-btn4" class="btn accent white-text">{{front.extra-btn4}}</a>
 				</div>
+			{{! CONTENIDOS EXTRA}}
+				<div class="col s12 m8 l9" id="extra-content1">
+					<p class="flow-text">{{{front.extra-content1}}}</p>
+				</div>
+				<div class="col s12 m8 l9" id="extra-content2">
+					<p class="flow-text">{{{front.extra-content2}}}</p>
+				</div>
+				<div class="col s12 m8 l9" id="extra-content3">
+					<p class="flow-text">{{{front.extra-content3}}}</p>
+				</div>
+				<div class="col s12 m8 l9" id="extra-content4">
+					<p class="flow-text">{{{front.extra-content4}}}</p>
+				</div>
+			{{!Botones para pantallas grandes}}
 				<div class="col s12 m4 l3 hide-on-small-only">
 					<div class="row">
 						<a id="extra-btn1" class="btn accent active white-text">{{front.extra-btn1}}</a>
@@ -147,12 +168,6 @@ quote-img: img/city.jpg
 					<div class="row">
 						<a id="extra-btn4" class="btn accent white-text">{{front.extra-btn4}}</a>
 					</div>
-				</div>
-				<div class="col s12 m4 l3 hide-on-med-and-up center">
-						<a href="" class="btn accent active white-text">{{front.extra-btn1}}</a>
-						<a href="" class="btn accent white-text">{{front.extra-btn2}}</a>
-						<a href="" class="btn accent white-text">{{front.extra-btn3}}</a>
-						<a href="" class="btn accent white-text">{{front.extra-btn4}}</a>
 				</div>
 			</div>
 		</div>
@@ -180,40 +195,70 @@ quote-img: img/city.jpg
 	function navActionBtn(){
 		$('#landingBtn').addClass('accent');
 	}
-	var scrollOptions = [{	selector: '.parallax-container', 
-							offset: 1000, 
-							callback: navActionBtn
-						},
-						{	selector: '#ventaja-1', 
-							offset: 000, 
-							callback: function() { 
-								Materialize.fadeInImage("#ventaja-1"); 
-								$("#ventaja-1").removeClass("hidden"); 
-							} 
-						},{	selector: '#ventaja-2', 
-							offset: 000, 
-							callback: function() { 
-								Materialize.fadeInImage("#ventaja-2"); 
-								$("#ventaja-2").removeClass("hidden"); 
-							} 
-						},{	selector: '#ventaja-3', 
-							offset: 000, 
-							callback: function() { 
-								Materialize.fadeInImage("#ventaja-3"); 
-								$("#ventaja-3").removeClass("hidden"); 
-							} 
-						}];
-
+	var scrollOptions = [
+		{	selector: '.parallax-container', 
+			offset: 1000, 
+			callback: navActionBtn
+		},
+		{	selector: '#ventaja-1', 
+			offset: 000, 
+			callback: function() { 
+				Materialize.fadeInImage("#ventaja-1"); 
+				$("#ventaja-1").removeClass("hidden"); 
+			} 
+		},{	selector: '#ventaja-2', 
+			offset: 000, 
+			callback: function() { 
+				Materialize.fadeInImage("#ventaja-2"); 
+				$("#ventaja-2").removeClass("hidden"); 
+			} 
+		},{	selector: '#ventaja-3', 
+			offset: 000, 
+			callback: function() { 
+				Materialize.fadeInImage("#ventaja-3"); 
+				$("#ventaja-3").removeClass("hidden"); 
+			} 
+		}];
 	$(document).ready(function(){
-      $('.parallax').parallax();
-      Materialize.scrollFire(scrollOptions);
-      $("#nav-mobile").removeClass("hidden"); 
+		$('.parallax').parallax();
+		Materialize.scrollFire(scrollOptions);
+		$("#nav-mobile").removeClass("hidden");
+
+		$('#extra-content1').slideUp(50);
+		$('#extra-content2').slideUp(50);
+		$('#extra-content3').slideUp(50);
+		$('#extra-content4').slideUp(50);
+		active('#extra-btn1','#extra-content1');
     });
-	$('#extra-btn1').click(function(){	
+	$('#extra-btn1, #extra-mini-btn1').click(function(){
+		inactive();
+		active('#extra-btn1','#extra-content1');
 	})
+	$('#extra-btn2, #extra-mini-btn2').click(function(){
+		inactive();
+		active('#extra-btn2','#extra-content2');
+	})
+	$('#extra-btn3, #extra-mini-btn3').click(function(){
+		inactive();
+			active('#extra-btn3','#extra-content3');
+	})
+	$('#extra-btn4, #extra-mini-btn4').click(function(){
+		inactive();
+			active('#extra-btn4','#extra-content4');
+	})
+	var activeTap='#extra-content1';
+	var inactive= function(){
+		$('#extra-btn1').removeClass('active');
+		$('#extra-btn2').removeClass('active');
+		$('#extra-btn3').removeClass('active');
+		$('#extra-btn4').removeClass('active');
+	}
+	var active= function(btn,content){
+		$(btn).addClass('active');
+		$(activeTap).fadeOut(100,function(){$(content).fadeIn(100)});
 
-
-
+		activeTap = content;
+	}
 
     </script>
 	{{>microdatos}}
