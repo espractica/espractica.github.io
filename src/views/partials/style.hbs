@@ -24,6 +24,9 @@
 .accent-text{
 	color: {{data.accent-text}} !important;
 }
+.waves-effect.waves-accent .waves-ripple {
+      background-color: {{data.accent}};
+    }
 input[type=text]:focus:not([readonly]) + label,
 input[type=password]:focus:not([readonly]) + label, 
 input[type=email]:focus:not([readonly]) + label, 
@@ -35,7 +38,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label, 
 input[type=search]:focus:not([readonly]) + label, 
 textarea.materialize-textarea:focus:not([readonly]) + label{
-	color: {{data.primary-dark}};
+	color: {{data.accent-dark}};
 }
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
@@ -50,8 +53,8 @@ input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]),
 textarea:focus {
-    border-bottom: 1px solid {{data.primary-dark}};
-    box-shadow: 0 1px 0 0 {{data.primary-dark}};
+    border-bottom: 1px solid {{data.accent-dark}};
+    box-shadow: 0 1px 0 0 {{data.accent-dark}};
 }
 /*estatus Colors*/
 .done{
