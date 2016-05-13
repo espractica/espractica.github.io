@@ -13,7 +13,7 @@ var htmlmin = require('gulp-htmlmin');
 var frontMatter = require('gulp-front-matter');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
-var sourcemaps = require('gulp-sourcemaps');
+//var sourcemaps = require('gulp-sourcemaps');
 //var ghPages = require('gulp-gh-pages')
 
 function plumberit(errTitle) {
@@ -71,11 +71,11 @@ JS watcher
 ///////////////////////////////////////*/
 gulp.task('js',  function () {
   return gulp.src(['./src/libraries/*.js','./src/js/*.js'])
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
         .pipe(plumberit("JS uglify errors"))
         .pipe(concat('min.js'))
         .pipe(uglify())
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.reload({ stream: true }));
 });
@@ -84,11 +84,11 @@ CSS watcher
 ///////////////////////////////////////*/
 gulp.task('css', function () { 
   return gulp.src(['./src/css/materialize.css','./src/css/*.css'])
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
             .pipe(plumberit('CSS parsing error'))
             .pipe(csso())
             .pipe(concat('min.css'))
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.reload({ stream: true }));
 });
