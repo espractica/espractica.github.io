@@ -4,8 +4,8 @@
 	"description":"Sistemas de simulación en ambientes de universitarios",
 	"google-analytics":"",
 	"url":"http://simulapro.com",
-	"logo-png":"img/simulapro2.png",
-	"logo-svg":"img/simulapro2.svg", 
+	"logo-png":"/img/simulapro2.png",
+	"logo-svg":"/img/simulapro2.svg", 
 	"phone":"+57-300-355-6475",
 
 
@@ -32,6 +32,7 @@
 	"accent"		:"#3F5FFF", 
 	"accent-dark"	:"#101840",
 	"accent-text"	:"#3F5FFF",
+	"accent-light"	:"#eceff1 ",
 
 	"footer-color"	:"#ffffff",
 	"nav-color"		:"#ffffff" 

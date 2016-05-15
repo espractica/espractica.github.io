@@ -90,12 +90,15 @@ nav .button-collapse{
 } 
 }
 .side-nav{
-  left: -5%;
+  left: -0%;
 }
 .side-nav li{
   display: list-item;
-  
 }
+#nav-mobile a:hover {
+    background-color: rgba(0,0,0,0); 
+}
+/*OUR OWN STYLE*/
 h1{
   font-size: 3em;
 }
@@ -133,11 +136,15 @@ a.btn.active::after{
   background-color: rgba(0,0,0,0.5) !important;
   border-radius:4px;
 } 
+.dark-80{
+  background-color: rgba(0,0,0,0.8) !important;
+  border-radius:4px;
+} 
 .landing{
   margin-top:26.700px;
   position: relative;
 }
-.landing img.absolute {
+.landing img.absolute,.landing object.absolute {
   position:absolute;
 }
 .hidden{
@@ -151,4 +158,41 @@ a.btn.active::after{
 }
 nav{
   border-bottom: 1px solid #eceff1; 
+}
+footer{
+  border-top: 1px solid #eceff1; 
+}
+#advantages img{
+  max-width: 128px;
+}
+div.main-img{
+  height: 400px;
+  overflow: hidden;
+  position: relative; 
+  width: 100%; /* for IE 6 */
+  background: url(/img/photo/aprendiendo.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div.main-img img{
+  height: 500px;
+}
+div.main-img .text{
+  position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
+   padding-left: 40px;
+   padding-right: 40px;
+   background-color: rgba(0,0,0,0.5);
+}
+#extra-info a.btn img{
+  width: 30px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+  margin-bottom: -10px;
+  margin-left:-40px;
 }

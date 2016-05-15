@@ -29,10 +29,10 @@ Browser Sync Implementation
 ///////////////////////////////////////*/
 gulp.task('browser-sync', function() {
     browserSync.init({
-        //tunnel:'mycutelanding',
+        //tunnel: true,
         server: {
             baseDir: "./dist",
-            port: 8888
+            port: 3000
         }
     });
 });
@@ -41,14 +41,15 @@ build and deploy
 ///////////////////////////////////////*/
 gulp.task('build',   function () {
     return gulp
-        .src('./src/views/pages/*.html')
+        .src('./src/views/pages/**/*.html')
         .pipe(plumberit('Build Error'))
         .pipe(frontMatter({property: 'data.front' }))
-        .pipe(hb({partials: './src/views/partials/*.hbs',data: './src/views/data.json',debug:0}))
+        .pipe(hb({partials: './src/views/partials/**/*.hbs',data: './src/views/data.json',debug:0}))
         .pipe(htmlmin({collapseWhitespace: true,minifyCSS:true,minifyJS:true,removeComments:true}))
         .pipe(gulp.dest('./dist'))
-        .pipe(browserSync.reload({ stream: true }));
+        //.pipe(browserSync.reload({ stream: false }));
 });
+gulp.task('build-watch', ['build'], browserSync.reload);
 //gulp.task('deploy', function() {
 //  return gulp.src('./dist/**/*')
 //    .pipe(ghPages({'branch':'master'}));
@@ -130,8 +131,8 @@ WATCHER
 gulp.task('default', ['browser-sync','js','css','build','svg','img'], function () {
 	gulp.watch(['./src/js/*.js'],   ['js','jslint']);
 	gulp.watch('./src/**/*.css',  ['css','csslint']);
-	gulp.watch('./dist/**/*.html', ['bs-reload']);
-	gulp.watch(['./src/views/**/*'], ['build']);
+	//gulp.watch('./dist/**/*.html', ['bs-reload']);
+	gulp.watch(['./src/views/**/*'], ['build-watch']);
 	gulp.watch('./src/img/**/*.svg', ['svg']);
 	gulp.watch('src/**/*.+(png|jpg|jpeg|gif)', ['img']);
 });

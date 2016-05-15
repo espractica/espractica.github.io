@@ -1,0 +1,33 @@
+{{!MAIN INFORMATION}}
+	{{!MAIN parallax}}
+	<div class="parallax-container valign-wrapper hide-on-small-only">
+      	<div class="parallax"><img alt="landing {{front.title}} heroshot" src="{{front.parallax}}.jpg"></div> 
+      	<div class="container container-90">
+	    	<div class="row valign	left-align ">
+				<div class="col s12 l6 m7 dark ">
+	    			<h1 class="white-text center">{{{front.hero-title}}}</h1>
+	    			<h2 class="thin white-text center">{{{front.hero-subtitle}}}</h2>
+	    			<div class="row center">
+	    				<a class="btn white accent-text modal-trigger"  href="#modal">{{front.action}}</a>
+	    				<a href="#demo" class="btn accent    ">{{front.sub-action}}</a>
+	    			</div>
+	    		</div>
+			</div>
+		</div>
+    </div>
+    {{!MAIN mobile-no-parallax}}
+    <div id="no-parallax" class="parallax-container valign-wrapper hide-on-med-and-up">
+      	<div class="no-parallax"></div> 
+      	<div class="container container-90">
+	    	<div class="row valign	left-align ">
+				<div class="col s12 l6 m7 dark-80 ">
+	    			<h1 class="white-text center">{{{front.hero-title}}}</h1>
+	    			<p  class="thin white-text center flow-text">{{{front.hero-subtitle}}}</p>
+	    			<div class="row center">
+	    				<a class="    btn white accent-text modal-trigger"  href="#modal">{{front.action}}</a>
+	    				<a href="#demo" class="btn accent    ">{{front.sub-action}}</a>
+	    			</div>
+	    		</div>
+			</div>
+		</div>
+    </div>

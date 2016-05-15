@@ -1,7 +1,21 @@
 ---
 title: FeGA
 message: It's ready to start
+
+###################
+#Extra section
+###################
+extra-title: Productos
+extra-content1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque vero mollitia, recusandae debitis. Expedita tempore nostrum deleniti voluptas, recusandae, quas hic! Qui blanditiis provident aliquam, placeat nemo id vitae.
+extra-content2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique excepturi nihil dolorum architecto, id veniam molestias perspiciatis nam repellat, sed. Numquam, cupiditate autem quas ea rerum nihil explicabo nobis! Laborum!
+extra-content3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quam voluptatem veritatis cum distinctio sunt similique nihil enim deserunt fuga adipisci minus sint aperiam repellat labore commodi, earum delectus nostrum.
+extra-content4: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab inventore maiores natus, quis dicta aspernatur dolor iusto quasi amet ratione, voluptas quibusdam. Quo reiciendis obcaecati nostrum, autem nam expedita quia.
+extra-btn1: <img class="product responsive-img" src="/img/icons/helmet2.svg" alt="helmet">  Ingenieria 
+extra-btn2: <img class="product responsive-img" src="/img/icons/money2.svg" alt="money"> Business 
+extra-btn3: <img class="product responsive-img" src="/img/icons/micro.svg" alt="microphone"> Conferencias
+extra-btn4: <img class="product responsive-img" src="/img/icons/wrench2.svg" alt="microphone"> Personalizado
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +31,72 @@ message: It's ready to start
 	{{>analytics}}
 	{{>nav}}
 
-	
-	{{!contenido principal}}
-	<div class="container">
-		<h1 class="thin">{{front.title}} BoilerPlate</h1>
-		<p class="flow-text">It's ready to start</p>
+	<div class="main-img">
+		<div class="text">
+			<h1 class="white-text">SimulaPro:</h1>
+			<h2 class="white-text flow-text">Creamos mejores experiencias de aprendizaje</h2>
+		</div>
 	</div>
-
+	<div class="accent-light">
+		<div class="container ">
+			<div class="row ">
+				<div class="col s12 l12 m12 ">
+					<h3 class="center">¿Quienes somos?</h3>
+					<p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="white">
+	{{>landing/extra-info}}
+	</div>
 	{{>footer}}
+	<script>
+	$(document).ready(function(){
+		$('.modal-trigger').leanModal();
+		$('select').material_select();
+		$("#nav-mobile").removeClass("hidden");
+
+		$('#extra-content1').slideUp(50);
+		$('#extra-content2').slideUp(50);
+		$('#extra-content3').slideUp(50);
+		$('#extra-content4').slideUp(50);
+		active('#extra-btn1','#extra-content1');
+    });
+	$('#extra-btn1, #extra-mini-btn1').click(function(){
+		inactive();
+		active('#extra-btn1','#extra-content1');
+	})
+	$('#extra-btn2, #extra-mini-btn2').click(function(){
+		inactive();
+		active('#extra-btn2','#extra-content2');
+	})
+	$('#extra-btn3, #extra-mini-btn3').click(function(){
+		inactive();
+			active('#extra-btn3','#extra-content3');
+	})
+	$('#extra-btn4, #extra-mini-btn4').click(function(){
+		inactive();
+			active('#extra-btn4','#extra-content4');
+	})
+	var activeTap='#extra-content1';
+	var inactive= function(){
+		$('#extra-btn1').removeClass('active');
+		$('#extra-btn2').removeClass('active');
+		$('#extra-btn3').removeClass('active');
+		$('#extra-btn4').removeClass('active');
+	}
+	var active= function(btn,content){
+		$(btn).addClass('active');
+		$(activeTap).fadeOut(100,function(){$(content).fadeIn(100)});
+
+		activeTap = content;
+	}</script>
 	<script src="/js/min.js"></script>
 	{{>microdatos}}
 </body>
