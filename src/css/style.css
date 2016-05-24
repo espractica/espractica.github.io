@@ -196,3 +196,15 @@ div.main-img .text{
   margin-bottom: -10px;
   margin-left:-40px;
 }
+#extra-info h3{
+  text-transform: none;
+  box-shadow: none;
+}
+#extra-info ul li{
+  list-style-type: circle;
+  margin-left: 20px;
+}
+#extra-mini-btn1,#extra-mini-btn2,#extra-mini-btn3,#extra-mini-btn4{
+  width:180px;
+  text-align: left
+}
