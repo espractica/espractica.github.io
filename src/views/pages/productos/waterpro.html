@@ -15,7 +15,7 @@ sub-action: Conoce más
 ###################
 #Mini demo section
 ###################
-demo-description: WaterPro es un simulador de proyectos de ingeniería en agua residual, donde los estudiantes pueden poner en práctica sus habilidades en la ejecución de proyectos de manera realista mientras aprenden-haciendo.
+demo-description: WaterPro es un simulador de proyectos de ingeniería en agua residual, donde los estudiantes pueden poner en práctica sus habilidades en la ejecución de proyectos de manera realista mientras el profesor recibe un feedback completo de sus habilidades.
 demo-img1: /img/landing/water-gif.svg
 demo-img2:
 demo-img3: 
@@ -34,20 +34,44 @@ description2: Puedes elegir entre uno de nuestros casos de simulación, o puedes
 
 subtitle3: Completo
 image3: /img/icons/box
-description3: Incluye todas las fases en la elaboración y ejecución de un proyecto en la vida real. Saber más
+description3: Incluye todas las fases en la elaboración y ejecución de un proyecto en la vida real, asi como gran diversidad de elementos de diseño.
 
 ###################
 #Extra section
 ###################
 extra-title: Alcances del simulador
-extra-content1: Tus estudiantes se verán retados a manejar adecuadamente el tiempo y los recursos asignados dentro de nuestros casos de simulación.
-extra-content2: Será la oportunidad perfecta para que tus estudiantes aprendan o demuestren habilidades en el diseño de plantas de tratamiento.
-extra-content3: Has que tus estudiantes compitan entre sí para que sientan el mundo profesional cada vez más cerca.
-extra-content4: Puedes intervenir en procesos tales como 
+extra-content1: 'Tus estudiantes se verán retados a manejar adecuadamente el tiempo y los recursos asignados dentro de nuestros casos de simulación:
+
+<h5 class="accent-text">Tiempo:</h5> <p class="flow-text">En la vida real, la planeacion y la toma de decisiones efectiva es clave, los estudiantes deberan decidir que pruebas o ensayos comprar y en que momento, teniendo en cuenta que su entrega no es instantanea.</p>
+
+<h5 class="accent-text">Inversión:</h5> <p class="flow-text">Los estudiantes comienzan con un presupuesto limitado para ejecutar pruebas y realizar estudios. asi, antes de tomar cada decision deberan conocer los conceptos relacionados y la informacion que cierta inversión puede proveer,<span class="accent-text">un verdadero aprendizaje aplicado</span></p>'
+extra-content2: 'Será la oportunidad perfecta para que tus estudiantes aprendan o demuestren habilidades en el diseño de plantas de tratamiento, en waterPRO, los estudiantes podran aprender los pros y cons, asi como metodologias de diseño de:
+
+<ul>
+	<li class="flow-text">Unidades de pretratamiento</li>
+	<li class="flow-text">Tratamiento primario</li>
+	<li class="flow-text">Tratamiento secundario</li>
+	<li class="flow-text">Ingeniería terciario</li>
+	<li class="flow-text">Manejo de lodos</li>
+</ul>
+'
+extra-content3: 'En waterPRO, los estudiantes (o equipos) pueden competir entre si por un ranking, que se medira en base a las buenas o malas decisiones que tomen, Esto permite generar un sano ambiente competitivo y a su ves aumenta el interes del estudiante por participar.
+
+<span class="accent-text">Has que tus estudiantes compitan entre sí para que sientan el mundo profesional cada vez más cerca!.</span>'
+
+extra-content4: 'Los grandes ingenieros son artistas en la elaboracion de proyectos. con el simulador, podras enseñarle los procesos clave de la planeación, tales como:
+
+<ul>
+	<li class="flow-text">Identificación de problemas</li>
+	<li class="flow-text">Analisis de alternativas</li>
+	<li class="flow-text">Elaboracion de presupuestos</li>
+	<li class="flow-text">Legislación nacional y estandares internacionales</li>
+</ul>'
+
 extra-btn1: Administración
 extra-btn2: Diseño
 extra-btn3: Competitividad
-extra-btn4: Procesos
+extra-btn4: Proyectos
 
 ###################
 #Quote section
@@ -56,7 +80,7 @@ quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
 quote-autor: Benjamin Franklin
 quote-img: /img/photo/city2
 ---
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head> 
 	<meta charset="UTF-8">
@@ -66,273 +90,23 @@ quote-img: /img/photo/city2
 	{{>style}}
 </head>
 <body>
-	{{>analytics}}
+	{{>analytics}} 
 	{{>nav-landing}}
 	{{!MAIN INFORMATION}}
 	{{!MAIN parallax}}
-	<div class="parallax-container valign-wrapper hide-on-small-only">
-      	<div class="parallax"><img alt="landing {{front.title}} heroshot" src="{{front.parallax}}.jpg"></div> 
-      	<div class="container container-90">
-	    	<div class="row valign	left-align ">
-				<div class="col s12 l6 m7 dark ">
-	    			<h1 class="white-text center">{{{front.hero-title}}}</h1>
-	    			<h2 class="thin white-text center">{{{front.hero-subtitle}}}</h2>
-	    			<div class="row center">
-	    				<a class="btn white accent-text modal-trigger"  href="#modal">{{front.action}}</a>
-	    				<a href="#demo" class="btn accent    ">{{front.sub-action}}</a>
-	    			</div>
-	    		</div>
-			</div>
-		</div>
-    </div>
-    {{!MAIN mobile-no-parallax}}
-    <div id="no-parallax" class="parallax-container valign-wrapper hide-on-med-and-up">
-      	<div class="no-parallax"></div> 
-      	<div class="container container-90">
-	    	<div class="row valign	left-align ">
-				<div class="col s12 l6 m7 dark-80 ">
-	    			<h1 class="white-text center">{{{front.hero-title}}}</h1>
-	    			<p  class="thin white-text center flow-text">{{{front.hero-subtitle}}}</p>
-	    			<div class="row center">
-	    				<a class="    btn white accent-text modal-trigger"  href="#modal">{{front.action}}</a>
-	    				<a href="#demo" class="btn accent    ">{{front.sub-action}}</a>
-	    			</div>
-	    		</div>
-			</div>
-		</div>
-    </div>
+	{{>landing/main-parallax}} 
     {{!MINI DEMO SECTION}}
-    <div class="section" id="demo">
-    <div class="container section"> 
-	    	<div class="row">
-	    		<div class="col s12 l6 m6">
-	    			<h2>¿Que es {{front.title}}?</h2>
-	    			<p class="flow-text">{{{front.demo-description}}}</p>
-	    		</div>
-	    		<div class="col s12 l6 m6">
-	    			<div class="landing">
-	    				 <object type="image/svg+xml" data="{{front.demo-img1}}" class="responsive-img absolute">Your browser does not support SVG</object></a></li>
-						{{! <img src="/img/landing-business1-sub1.svg" alt="BussinessPro ejemplo"  class="responsive-img absolute"> }}
-						<object type="image/svg+xml" data="/img/landing/water-sub2.svg" class="responsive-img">Your browser does not support SVG</object></a></li>  				
-						{{!<img src="/img/landing-business1.svg" alt="BussinessPro ejemplo" class="responsive-img">}}
-	    				
-	    			</div>
-	    		</div>
-	    	</div>
-	    </div>
-    </div>
+    {{>landing/mini-demo}}
     {{!ADVANTAGES SECTION}} 
-    <div class="accent" id="advantages">
-	    <div class="container section">
-	    <div class="row"><h2 class="center white-text">{{front.advantajes-title}}</h2></div>
-	    	<div class="row hidden" id="ventaja-1">
-	    		<div class="col s12 l3 m4 center">
-	    			<img src="{{front.image1}}.svg" alt="{{front.subtitle1}}"  class="landing white circle responsive-img absolute">
-	    		</div>
-	    		<div class="col s12 l9 m8">
-	    			<h3 class="white-text">{{front.subtitle1}}</h3>
-	    			<p class="flow-text white-text thin">{{front.description1}}</p>
-	    		</div>
-	    	</div>
-	    	<div class="row hidden" id="ventaja-2">
-	    		<div class="col s12 l3 m4 center">
-	    			<img src="{{front.image2}}.svg" alt="{{front.subtitle2}}"  class="landing white circle responsive-img absolute">
-	    		</div>
-	    		<div class="col s12 l9 m8">
-	    			<h3 class="white-text">{{front.subtitle2}}</h3>
-	    			<p class="flow-text white-text thin">{{front.description2}}</p>
-	    		</div>
-	    	</div>
-	    	<div class="row hidden" id="ventaja-3">
-	    		<div class="col s12 l3 m4 center"><img src="{{front.image3}}.svg" alt="{{front.subtitle3}}"  class="landing white circle responsive-img absolute"></div>
-	    		<div class="col s12 l9 m8">
-	    			<h3 class="white-text">{{front.subtitle3}}</h3>
-	    			<p class="flow-text white-text thin">{{front.description3}}</p>
-	    		</div>
-	    	</div>
-	    </div>
-	</div>
-	{{!EXTRA SECTION}}
-	<div>
-		<div class="container section">
-			<div class="row">
-				<div class="col s12">
-					<h2>{{{front.extra-title}}}</h2>
-				</div>
-			</div>
-			<div class="row">
-			{{!Botones para pantallas Pequeñas}}
-				<div class="col s12 m4 l3 hide-on-med-and-up center">
-						<a id="extra-mini-btn1" class="btn accent white-text">{{front.extra-btn1}}</a>
-						<a id="extra-mini-btn2" class="btn accent white-text">{{front.extra-btn2}}</a>
-						<a id="extra-mini-btn3" class="btn accent white-text">{{front.extra-btn3}}</a>
-						<a id="extra-mini-btn4" class="btn accent white-text">{{front.extra-btn4}}</a>
-				</div>
-			{{! CONTENIDOS EXTRA}}
-				<div class="col s12 m8 l9" id="extra-content1">
-					<p class="flow-text ">{{{front.extra-content1}}}</p>
-				</div>
-				<div class="col s12 m8 l9" id="extra-content2">
-					<p class="flow-text ">{{{front.extra-content2}}}</p>
-				</div>
-				<div class="col s12 m8 l9" id="extra-content3">
-					<p class="flow-text ">{{{front.extra-content3}}}</p>
-				</div>
-				<div class="col s12 m8 l9" id="extra-content4">
-					<p class="flow-text ">{{{front.extra-content4}}}</p>
-				</div>
-			{{!Botones para pantallas grandes}}
-				<div class="col s12 m4 l3 hide-on-small-only">
-					<div class="row">
-						<a id="extra-btn1" class="btn accent active white-text">{{front.extra-btn1}}</a>
-					</div>
-					<div class="row">
-						<a id="extra-btn2" class="btn accent white-text">{{front.extra-btn2}}</a>
-					</div>
-					<div class="row">
-						<a id="extra-btn3" class="btn accent white-text">{{front.extra-btn3}}</a>
-					</div>
-					<div class="row">
-						<a id="extra-btn4" class="btn accent white-text">{{front.extra-btn4}}</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    {{>landing/advantages1}}
+	{{!EXTRA SECTION}} 
+	{{>landing/advantages2}}
 	{{!QUOTE SECTION}}
-	<div class="parallax-container valign-wrapper hide-on-small-only">
-      	<div class="parallax"><img alt="landing {{front.quote-autor}} Quote" src="{{front.quote-img}}.jpg"></div> 
-      	<div class="container container-90">
-	    	<div class="row valign	left-align ">
-				<div class="col s12 l6 m7 dark offset-l6">
-	    			<h2 class="thin white-text center">"{{{front.quote}}}"</h2>
-	    			<h3 class="thin accent-text author">— {{front.quote-autor}}</h3>
-	    			<h2 class="thin white-text center">Envuelvete en conocimiento:</h2>
-	    			<div class="row center">
-	    				<a class="    btn white accent-text modal-trigger" href="#modal">Pide una demo</a>
-	    			</div>
-	    		</div>
-			</div>
-		</div>
-    </div>
-    <div id="quote-mobile" class="parallax-container valign-wrapper hide-on-med-and-up">
-      	<div class="container container-90">
-	    	<div class="row valign	left-align ">
-				<div class="col s12 l6 m7 dark-80 offset-l6">
-	    			<p class="thin white-text center flow-text">"{{{front.quote}}}"</p>
-	    			<p class="thin accent-text author flow-text">— {{front.quote-autor}}</p>
-	    			<p class="thin white-text center flow-text">Envuelvete en conocimiento:</p>
-	    			<div class="row center">
-	    				<a class="    btn white accent-text modal-trigger" href="#modal">Pide una demo</a>
-	    			</div>
-	    		</div>
-			</div>
-		</div>
-    </div>
+	{{>landing/quote}}
     {{!INSCRIPTION MODAL}}
-    <div id="modal" class="modal">
-    	<div class="modal-content">
-    	<h3>Pide  una demo:</h3>
-    		<p class="flow-text">Para solicitar la demo de {{front.title}} introduce los siguientes datos:</p>
-    		<div class="row">
-    			<div class="input-field col s12 m12 l6">
-          			<input id="name" type="text" class="validate">
-          			<label for="name">Nombre completo</label>
-        		</div>
-        		<div class="input-field col s12 m12 l6">
-          			<input id="name" type="text" class="validate">
-          			<label for="name">email institucional</label>
-        		</div>
-
-        		<div class="input-field col s12 m12 l6 ">
-					<select class="browser-default">
-						<option value="" disabled selected>Profesion</option>
-						<option value="1">Docente</option>
-						<option value="2">Consultor</option>
-						<option value="3">Empleado</option>
-						<option value="3">Directivo</option>
-					</select>
-				</div>
-    		</div>
-    	</div>
-    	<div class="modal-footer">
-    		<a href="#!" class=" modal-action modal-close     btn-flat primary-text">Enviar</a>
-    	</div>
-    </div>
+    {{>landing/registry-form}}
 	{{>footer}}
 	<script src="/js/min.js"></script>
-	<script>
-	function navActionBtn(){
-		$('#landingBtn').addClass('accent');
-	}
-	var scrollOptions = [
-		{	selector: '.parallax-container', 
-			offset: 1000, 
-			callback: navActionBtn
-		},
-		{	selector: '#ventaja-1', 
-			offset: 000, 
-			callback: function() { 
-				Materialize.fadeInImage("#ventaja-1"); 
-				$("#ventaja-1").removeClass("hidden"); 
-			} 
-		},{	selector: '#ventaja-2', 
-			offset: 000, 
-			callback: function() { 
-				Materialize.fadeInImage("#ventaja-2"); 
-				$("#ventaja-2").removeClass("hidden"); 
-			} 
-		},{	selector: '#ventaja-3', 
-			offset: 000, 
-			callback: function() { 
-				Materialize.fadeInImage("#ventaja-3"); 
-				$("#ventaja-3").removeClass("hidden"); 
-			} 
-		}];
-	$(document).ready(function(){
-		$('.parallax').parallax();
-		Materialize.scrollFire(scrollOptions);
-		$('.modal-trigger').leanModal();
-		$('select').material_select();
-		$("#nav-mobile").removeClass("hidden");
-
-		$('#extra-content1').slideUp(50);
-		$('#extra-content2').slideUp(50);
-		$('#extra-content3').slideUp(50);
-		$('#extra-content4').slideUp(50);
-		active('#extra-btn1','#extra-content1');
-    });
-	$('#extra-btn1, #extra-mini-btn1').click(function(){
-		inactive();
-		active('#extra-btn1','#extra-content1');
-	})
-	$('#extra-btn2, #extra-mini-btn2').click(function(){
-		inactive();
-		active('#extra-btn2','#extra-content2');
-	})
-	$('#extra-btn3, #extra-mini-btn3').click(function(){
-		inactive();
-			active('#extra-btn3','#extra-content3');
-	})
-	$('#extra-btn4, #extra-mini-btn4').click(function(){
-		inactive();
-			active('#extra-btn4','#extra-content4');
-	})
-	var activeTap='#extra-content1';
-	var inactive= function(){
-		$('#extra-btn1').removeClass('active');
-		$('#extra-btn2').removeClass('active');
-		$('#extra-btn3').removeClass('active');
-		$('#extra-btn4').removeClass('active');
-	}
-	var active= function(btn,content){
-		$(btn).addClass('active');
-		$(activeTap).fadeOut(100,function(){$(content).fadeIn(100)});
-
-		activeTap = content;
-	}
-
-    </script>
     {{>landing/script}}
 	{{>microdatos}}
 </body>

@@ -1,0 +1,99 @@
+---
+###################
+#main information
+###################
+title: BusinessPro 
+description: Simuladores de negocios, administración y más.
+parallax: /img/photo/parallax
+hero-title:  BusinessPro:<br> Crea empresarios exitosos. 
+hero-subtitle: Usa nuestros simuladores para enseñarles habilidades <br> críticas en su vida profesional.
+#actions
+action: Pedir demo
+sub-action: conoce más
+#main description
+main-description: BusinessPro es una herramienta de simulación empresarial.<br>Has que tus estudiantes desarrollen estrategias, analicen informes, aprendan a realizar inversiones y se envuelvan en la toma de decisiones empresariales.
+
+###################
+#Advantages section
+###################
+advantages-title: Ventajas de usar BusinesPro
+
+subtitle1: Refuerza los conocimientos
+image1: /img/icons/money
+description1: Has que tus estudiantes retengan los conceptos fácilmente, por medio del aprender-haciendo en ambientes realistas del sector empresarial.
+
+subtitle2: Optimiza el tiempo
+image2: /img/icons/time
+description2: Has tus clases más interactivas y sin gastar tiempo de más leyendo manuales tediosos. 
+
+subtitle3: Conoce tus estudiantes
+image3: /img/icons/student
+description3: Entérate de cada una de las habilidades de tus estudiantes así como su desempeño en el simulador.
+
+###################
+#Extra section
+###################
+extra-title: Alcances del simulador
+extra-content1: Puedes hacer de tus estudiantes unos expertos en gestión de tiempo y recursos usando nuestros simuladores.
+extra-content2: ¿Porque no  enseñarles a crear una empresa desde cero? Has que tus estudiantes aborden nuevos retos.
+extra-content3: La enseñanza de incoterms, logística internacional y demás puede ser más interactiva; no te quedes en las clases teóricas!
+extra-content4: Tus estudiantes pueden conocer el sector hotelero; sólo debes envolverlos en ambientes prácticos.
+extra-btn1: Administración
+extra-btn2: Emprendimiento
+extra-btn3: Distribución Física Internacional
+extra-btn4: Hotelería
+
+###################
+#Quote section
+###################
+quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
+quote-autor: Benjamin Franklin
+quote-img: /img/photo/city
+---
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<title>{{data.title}} | {{front.title}} | {{front.description}}</title>
+	<meta name="description" content="{{data.description}}">
+	{{>head}}
+	
+</head>
+<body>
+	{{>analytics}}
+	{{>nav-landing}} 
+	{{>landing/main-parallax}} 
+
+    <div class="section" id="demo">
+    <div class="container section"> 
+	    	<div class="row">
+	    		<div class="col s12 l6 m6">
+	    			<h2>¿Que es {{front.title}}?</h2>
+	    			<p class="flow-text">{{{front.main-description}}}</p>
+	    		</div>
+	    		<div class="col s12 l6 m6">
+	    			<div class="landing">
+	    				<img src="/img/landing-business1-sub2.svg"  alt="BussinessPro ejemplo"  class="responsive-img absolute"> 
+						{{! <img src="/	img/landing-business1-sub1.svg" alt="BussinessPro ejemplo"  class="responsive-img absolute"> }}   				
+						<img src="/img/landing-business1.svg" alt="BussinessPro ejemplo" class="responsive-img">
+	    				
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+    </div>
+    {{>landing/advantages1}}
+
+	{{>landing/advantages2}}
+
+	{{>landing/quote}}
+
+    {{>landing/registry-form}}
+
+	{{>footer}}
+	<script src="/js/min.js"></script>
+	{{>landing/script}}
+	{{>microdatos}}
+</body>
+</html>
+{{>style}}

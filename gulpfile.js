@@ -29,6 +29,7 @@ Browser Sync Implementation
 ///////////////////////////////////////*/
 gulp.task('browser-sync', function() {
     browserSync.init({
+        notify: false,
         //tunnel: true,
         server: {
             baseDir: "./dist",

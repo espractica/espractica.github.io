@@ -1,4 +1,76 @@
 <script>
+	function navActionBtn(){
+		$('#landingBtn').addClass('accent');
+	}
+	var scrollOptions = [
+		{	selector: '.parallax-container', 
+			offset: 1000, 
+			callback: navActionBtn
+		},
+		{	selector: '#ventaja-1', 
+			offset: 000, 
+			callback: function() { 
+				Materialize.fadeInImage("#ventaja-1"); 
+				$("#ventaja-1").removeClass("hidden"); 
+			} 
+		},{	selector: '#ventaja-2', 
+			offset: 000, 
+			callback: function() { 
+				Materialize.fadeInImage("#ventaja-2"); 
+				$("#ventaja-2").removeClass("hidden"); 
+			} 
+		},{	selector: '#ventaja-3', 
+			offset: 000, 
+			callback: function() { 
+				Materialize.fadeInImage("#ventaja-3"); 
+				$("#ventaja-3").removeClass("hidden"); 
+			} 
+		}];
+	$(document).ready(function(){
+		$('.parallax').parallax();
+		Materialize.scrollFire(scrollOptions);
+		$('.modal-trigger').leanModal();
+		$('select').material_select();
+		$("#nav-mobile").removeClass("hidden");
+
+		$('#extra-content1').slideUp(50);
+		$('#extra-content2').slideUp(50);
+		$('#extra-content3').slideUp(50);
+		$('#extra-content4').slideUp(50);
+		active('#extra-btn1','#extra-content1');
+    });
+	$('#extra-btn1, #extra-mini-btn1').click(function(){
+		inactive();
+		active('#extra-btn1','#extra-content1');
+	})
+	$('#extra-btn2, #extra-mini-btn2').click(function(){
+		inactive();
+		active('#extra-btn2','#extra-content2');
+	})
+	$('#extra-btn3, #extra-mini-btn3').click(function(){
+		inactive();
+			active('#extra-btn3','#extra-content3');
+	})
+	$('#extra-btn4, #extra-mini-btn4').click(function(){
+		inactive();
+			active('#extra-btn4','#extra-content4');
+	})
+	var activeTap='#extra-content1';
+	var inactive= function(){
+		$('#extra-btn1').removeClass('active');
+		$('#extra-btn2').removeClass('active');
+		$('#extra-btn3').removeClass('active');
+		$('#extra-btn4').removeClass('active');
+	}
+	var active= function(btn,content){
+		$(btn).addClass('active');
+		$(activeTap).fadeOut(100,function(){$(content).fadeIn(100)});
+
+		activeTap = content;
+	}
+
+</script>
+<script>
 	$(document).ready(function () {
 			$(function () {
 				$('a[href*="#"]:not([href="#"])').click(function () {

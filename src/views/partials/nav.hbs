@@ -3,8 +3,8 @@
 			<div class="nav-wrapper " data-spy="affix" data-offset-top="100">
 				<a id="logo-container" class="brand-logo"><object  type="image/svg+xml" data="{{data.logo-svg}}" height="50"><img height=59 src="{{data.logo-png}}" alt="{{data.title}} logo" ></object></a>
 				<ul class="right hide-on-med-and-down ">
-					<li ><a class="accent-text" href="">Principal</a></li>
-					<li ><a class="accent-text" href="">Productos</a></li>
+					<li ><a class="accent-text" href="/">Principal</a></li>
+					<li ><a class="accent-text dropdown-button" href='#' data-activates='dropdown-productos'>Productos</a></li>
 					<a id="landingBtn" class="btn accent modal-trigger" href="#modal">Pide una demo</a> 
 				</ul>
 				<ul id="nav-mobile" class="side-nav"> 
@@ -15,4 +15,10 @@
 				<a href="#" data-activates="nav-mobile" class="button-collapse primary-text  "><i class="material-icons waves-effect waves-pink circle">menu</i></a>
 			</div>
 		</nav>
-	</header>
+</header>
+
+{{!productos Dropdown:}}
+ <ul id='dropdown-productos' class='dropdown-content'>
+    <li><a class="accent-text" href="/productos/waterpro.html">Ingenieria</a></li>
+    <li><a class="accent-text" href="/productos/negocios.html">Negocios</a></li>
+  </ul>
