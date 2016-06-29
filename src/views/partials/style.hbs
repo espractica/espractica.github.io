@@ -2,7 +2,9 @@
 <link href="/css/min.css" type="text/css" rel="stylesheet" media="screen" />
 {{!<link href="css/print.css" type="text/css" rel="stylesheet" media="print" />}}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+
 <style>
+{{#unless front.theme}}
 .primary{
 	background-color: {{data.primary}} !important;
 }
@@ -95,6 +97,100 @@ a.btn:hover{
 .parallax{
   background-color: {{data.accent-dark}} ;
 }
+{{else}}
+.primary{
+	background-color: {{front.primary}} !important;
+}
+.primary.lighten{
+	background-color: {{front.primary-light}} !important;
+}
+.primary.darken{
+	background-color: {{front.primary-dark}} !important;
+}
+.primary-text{
+	color: {{front.primary-text}} !important;
+}
+.accent{
+	background-color: {{front.accent}} !important;
+} 
+.accent-dark{
+	background-color: {{front.accent-dark}} !important;
+}
+.accent-light{
+	background-color: {{front.accent-light}} !important;
+} 
+.accent-text{
+	color: {{front.accent-text}} !important;
+}
+.waves-effect.waves-accent .waves-ripple {
+      background-color: {{front.accent}};
+    }
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label, 
+input[type=email]:focus:not([readonly]) + label, 
+input[type=url]:focus:not([readonly]) + label, 
+input[type=time]:focus:not([readonly]) + label, 
+input[type=date]:focus:not([readonly]) + label, 
+input[type=datetime-local]:focus:not([readonly]) + label, 
+input[type=tel]:focus:not([readonly]) + label, 
+input[type=number]:focus:not([readonly]) + label, 
+input[type=search]:focus:not([readonly]) + label, 
+textarea.materialize-textarea:focus:not([readonly]) + label{
+	color: {{front.accent-dark}};
+}
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]),
+textarea:focus {
+    border-bottom: 1px solid {{front.accent-dark}};
+    box-shadow: 0 1px 0 0 {{front.accent-dark}};
+}
+/*estatus Colors*/
+.done{
+	background-color: #00c853  !important;
+}
+.done-text{
+	background-color: #2c3e50 !important;
+	color: #e8f5e9 !important;
+}
+.error{
+	background-color: #d50000  !important;
+}
+
+.error-text{
+	background-color: #ffebee  !important;
+	color: #d50000  !important;
+}
+.sync{
+	background-color: #ffab00   !important;
+}
+footer{
+	background-color: {{front.footer-color}}   !important;
+}
+
+nav{
+	background-color: {{front.nav-color}}   !important;
+}
+a.btn.active::after{
+  border-right:23px solid {{front.accent}};   
+}
+a.btn:hover{
+	background-color: {{front.accent-dark}} !important;
+	color: white !important;
+	}
+.parallax{
+  background-color: {{front.accent-dark}} ;
+}
+{{/unless}}
 #no-parallax{
 	background: url({{front.parallax}}-mini.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;

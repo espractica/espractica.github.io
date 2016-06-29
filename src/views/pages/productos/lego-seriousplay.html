@@ -1,0 +1,101 @@
+---
+###################
+#Style
+###################
+theme: "#370808"
+
+primary: "#ffffff"
+primary-light: "#ffffff"
+primary-dark: "#ffffff"
+primary-text: "#000000"
+
+accent: "#370808"
+accent-dark: "#1D0101"
+accent-text: "#370808"
+accent-light: "#FF5050 "
+
+footer-color: "#ffffff"
+nav-color: "#ffffff" 
+
+###################
+#main information
+###################
+title: Lego Serious play 
+description: Facilitadores y conferencias lego Serious Play
+parallax: /img/photo/lego
+hero-title:  LEGO serious Play®:<br> <h2 class="white-text center">Logra confianza y comunicación en tu empresa </h2>
+hero-subtitle: Mediante nuestros facilitadores expertos en esta innovadora metodologia		.
+#actions
+action: Pedir demo
+sub-action: conoce más
+#main description
+main:
+    img: /img/photo/lego-puente.png
+    description: BusinessPro es una herramienta de simulación empresarial.<br>Has que tus estudiantes desarrollen estrategias, analicen informes, aprendan a realizar inversiones y se envuelvan en la toma de decisiones empresariales.
+###################
+#Advantages type 3 section
+###################
+advantajes:
+    title: Ventajas de LEGO serious play
+    subtitles:
+    - Totalmente versatil
+    - Dinamica y divertida
+    - increiblemente eficaz
+    images:
+    - /img/icons/money
+    - /img/icons/time 
+    - /img/icons/student
+    descriptions:
+    - Has que tus estudiantes retengan los conceptos fácilmente, por medio del aprender-haciendo en ambientes realistas del sector empresarial.
+    - Has tus clases más interactivas y sin gastar tiempo de más leyendo manuales tediosos. 
+    - Entérate de cada una de las habilidades de tus estudiantes así como su desempeño en el simulador.
+
+###################
+#Extra section
+###################
+extra-title: Alcances del simulador
+extra-content1: Puedes hacer de tus estudiantes unos expertos en gestión de tiempo y recursos usando nuestros simuladores.
+extra-co ntent2: ¿Porque no  enseñarles a crear una empresa desde cero? Has que tus estudiantes aborden nuevos retos.
+extra-content3: La enseñanza de incoterms, logística internacional y demás puede ser más interactiva; no te quedes en las clases teóricas!
+extra-content4: Tus estudiantes pueden conocer el sector hotelero; sólo debes envolverlos en ambientes prácticos.
+extra-btn1: Administración
+extra-btn2: Emprendimiento
+extra-btn3: Distribución Física Internacional
+extra-btn4: Hotelería
+
+###################
+#Quote section
+###################
+quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
+quote-autor: Benjamin Franklin
+quote-img: /img/photo/city
+---
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<title>{{data.title}} | {{front.title}} | {{front.description}}</title>
+	<meta name="description" content="{{data.description}}">
+	{{>head}}
+	{{>style}}
+</head>
+<body>
+	{{>analytics}}
+	{{>nav-landing}} 
+	{{>landing/main-parallax}} 
+
+    {{>landing/main-description}}
+    {{>landing/advantages3 info=front.advantajes}}
+
+	{{>landing/advantages2}}
+
+	{{>landing/quote}}
+
+    {{>landing/registry-form}}
+
+	{{>footer}}
+	<script src="/js/min.js"></script>
+	{{>landing/script}}
+	{{>microdatos}}
+</body>
+</html>

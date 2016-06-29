@@ -1,0 +1,28 @@
+{{#unless info.theme}} <div class="grayly" id="advantages"> {{else}} <div class="{{info.theme.background}}" id="advantages"> {{/unless}}
+	    <div class="container section">
+	    <div class="row">
+	    	<h2 class="center {{info.theme.text}}">{{info.title}}</h2>
+	    </div>
+		<div class="row">
+			<div class="center col s12 m12 l4">
+				<img src="{{info.images.[0]}}.svg" alt="{{info.subtitles.[0]}}"  class="landing white circle responsive-img absolute">
+				<h3 class="{{info.theme.text}}">{{info.subtitles.[0]}}</h3>
+				<p class="flow-text {{info.theme.text}} ">{{info.descriptions.[0]}}</p>
+			</div>
+			<div class="center col s12 m12 l4">
+				<img src="{{info.images.[1]}}.svg" alt="{{info.subtitles.[1]}}"  class="landing white circle responsive-img absolute">
+				<h3 class="{{info.theme.text}}">{{info.subtitles.[1]}}</h3>
+				<p class="flow-text {{info.theme.text}} ">{{info.descriptions.[1]}}</p>
+			</div>
+			<div class="center col s12 m12 l4 hide-on-med-only">
+				<img src="{{info.images.[2]}}.svg" alt="{{info.subtitles.[2]}}"  class="landing white circle responsive-img absolute">
+				<h3 class="{{info.theme.text}}">{{info.subtitles.[2]}}</h3>
+				<p class="flow-text {{info.theme.text}} ">{{info.descriptions.[2]}}</p>
+			</div>
+			<div class="center col s12 m12 l4 hide-on-small-only hide-on-large-only">
+				<img src="{{info.images.[2]}}.svg" alt="{{info.subtitles.[2]}}"  class="landing white circle responsive-img absolute">
+				<h3 class="{{info.theme.text}}">{{info.subtitles.[2]}}</h3>
+				<p class="flow-text {{info.theme.text}} ">{{info.descriptions.[2]}}</p>
+			</div>
+		</div>
+	</div></div>
