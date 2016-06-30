@@ -26,9 +26,11 @@ parallax: /img/photo/lego
 hero-title:  LEGO serious Play®:<br> <h2 class="white-text center">Logra confianza y comunicación en tu empresa </h2>
 hero-subtitle: Mediante nuestros facilitadores expertos en esta innovadora metodologia		.
 #actions
-action: Pedir demo
+action: Cotiza ya!
 sub-action: conoce más
+###################
 #main description
+###################
 main:
     img: /img/photo/lego-puente.png
     description: BusinessPro es una herramienta de simulación empresarial.<br>Has que tus estudiantes desarrollen estrategias, analicen informes, aprendan a realizar inversiones y se envuelvan en la toma de decisiones empresariales.
@@ -42,9 +44,9 @@ advantajes:
     - Dinamica y divertida
     - increiblemente eficaz
     images:
-    - /img/icons/money
-    - /img/icons/time 
-    - /img/icons/student
+    - /img/icons/lego
+    - /img/icons/lego-head
+    - /img/icons/lego
     descriptions:
     - Has que tus estudiantes retengan los conceptos fácilmente, por medio del aprender-haciendo en ambientes realistas del sector empresarial.
     - Has tus clases más interactivas y sin gastar tiempo de más leyendo manuales tediosos. 
@@ -58,17 +60,19 @@ extra-content1: Puedes hacer de tus estudiantes unos expertos en gestión de tie
 extra-co ntent2: ¿Porque no  enseñarles a crear una empresa desde cero? Has que tus estudiantes aborden nuevos retos.
 extra-content3: La enseñanza de incoterms, logística internacional y demás puede ser más interactiva; no te quedes en las clases teóricas!
 extra-content4: Tus estudiantes pueden conocer el sector hotelero; sólo debes envolverlos en ambientes prácticos.
-extra-btn1: Administración
-extra-btn2: Emprendimiento
-extra-btn3: Distribución Física Internacional
-extra-btn4: Hotelería
+extra-btn1: Innovación
+extra-btn2: Trabajo en equipo
+extra-btn3: P. estrategico
+extra-btn4: Liderazgo
 
 ###################
 #Quote section
 ###################
-quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
-quote-autor: Benjamin Franklin
-quote-img: /img/photo/city
+quote:
+    quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
+    autor: Benjamin Franklin
+    img: /img/photo/lego-city
+    btn: Cotiza ya! 
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +93,7 @@ quote-img: /img/photo/city
 
 	{{>landing/advantages2}}
 
-	{{>landing/quote}}
+	{{>landing/quote info=front.quote}}
 
     {{>landing/registry-form}}
 

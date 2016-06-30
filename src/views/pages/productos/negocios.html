@@ -46,9 +46,10 @@ extra-btn4: Hotelería
 ###################
 #Quote section
 ###################
-quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
-quote-autor: Benjamin Franklin
-quote-img: /img/photo/city
+quote:
+    quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
+    autor: Benjamin Franklin
+    img: /img/photo/city
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +87,7 @@ quote-img: /img/photo/city
 
 	{{>landing/advantages2}}
 
-	{{>landing/quote}}
+	{{>landing/quote info=front.quote}}
 
     {{>landing/registry-form}}
 

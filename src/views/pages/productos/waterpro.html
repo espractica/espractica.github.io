@@ -76,9 +76,11 @@ extra-btn4: Proyectos
 ###################
 #Quote section
 ###################
-quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
-quote-autor: Benjamin Franklin
-quote-img: /img/photo/city2
+quote:
+    quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
+    autor: Benjamin Franklin
+    img: /img/photo/city2
+    btn: Cotiza ya!
 ---
 <!DOCTYPE html> 
 <html lang="en">
@@ -102,7 +104,7 @@ quote-img: /img/photo/city2
 	{{!EXTRA SECTION}} 
 	{{>landing/advantages2}}
 	{{!QUOTE SECTION}}
-	{{>landing/quote}}
+	{{>landing/quote info=front.quote}}
     {{!INSCRIPTION MODAL}}
     {{>landing/registry-form}}
 	{{>footer}}
