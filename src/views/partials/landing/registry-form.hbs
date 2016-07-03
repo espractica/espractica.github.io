@@ -1,7 +1,7 @@
 <div id="registry-modal" class="modal">
 	<div class="modal-content">
 		<h3>Pide  una demo:</h3>
-		<p class="flow-text">Para solicitar la demo de {{front.title}} introduce los siguientes datos:</p>
+		<p class="flow-text">Para solicitar la demo de {{#if info.title}}{{info.title}}{{else}}alguno de nuestros productos{{/if}} introduce los siguientes datos:</p>
 		<div class="row">
 			<div class="input-field col s12 m12 l12">
 				<input id="name" type="text" class="validate">

@@ -29,6 +29,12 @@
 .accent-text{
 	color: {{data.accent-text}} !important;
 }
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating){
+  color: {{data.accent}};
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+    color: {{data.accent-dark}};
+}
 .waves-effect.waves-accent .waves-ripple {
       background-color: {{data.accent}};
     }

@@ -1,7 +1,10 @@
 ---
 title: principal
-image-text: "SimulaPRO"
-subimage-text: Creamos mejores experiencias de aprendizaje
+
+main-img:
+    title: "SimulaPRO"
+    subtitle: Creamos mejores experiencias de aprendizaje
+    img: /img/photo/aprendiendo.jpg
 
 ###################
 #main section
@@ -50,20 +53,14 @@ extra-btn4: <img class="product responsive-img" src="/img/icons/wrench2.svg" alt
 	<title>{{data.title}} | {{front.title}}</title>
 	<meta name="description" content="{{data.description}}">
 	{{>head}}
-
 	<!-- CSS  -->
 	{{>style}}
-</head>
+</head> 		
 <body>
 	{{>analytics}}
 	{{>nav}}
 
-	<div class="main-img">
-		<div class="text">
-			<h1 class="white-text">{{front.image-text}}</h1>
-			<h2 class="white-text flow-text">{{front.subimage-text}}</h2>
-		</div>
-	</div>
+	{{>main-img info=front.main-img}}
 	<div class="accent-light">
 		<div class="container ">
 			<div class="row ">
@@ -75,6 +72,7 @@ extra-btn4: <img class="product responsive-img" src="/img/icons/wrench2.svg" alt
 		</div>
 	</div>
 	<div class="white">
+
 	{{>landing/extra-info}}
 	</div>
 	{{>footer}}
@@ -121,5 +119,6 @@ extra-btn4: <img class="product responsive-img" src="/img/icons/wrench2.svg" alt
 	}</script>
 	<script src="/js/min.js"></script>
 	{{>microdatos}}
+	{{>landing/registry-form}}
 </body>
 </html>

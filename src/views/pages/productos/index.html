@@ -1,0 +1,104 @@
+---
+title: productos Simulapro
+main-img:
+    title: "Productos"
+    subtitle: por una mejor educación
+    img: 	/img/icons/box-tile.png
+    repeat: true
+
+###################
+#main section
+###################
+main-title: ¿Quienes somos?
+main-text: Nos dedicamos a brindar servicios de formación y entrenamiento a empresas y universidades, por medio de Simuladores de última generación y conferencias online y offline.<br><br>¿Necesitas un simulador para tu institucion hecho a medida? También ofrecemos opciones de desarrollo.
+
+###################
+#Extra section
+###################
+products:
+ - title: WaterPro
+   description: some description
+   action: pedir ya!
+   img: /img/logos/waterworks.png
+ - title: BusinessPro
+   description: some description
+   action: pedir ya!
+   img: /img/logos/businesspro.png
+ - title: Lego Serious play
+   description: some description
+   action: pedir ya!
+   img: /img/logos/lego-brain.jpg
+ - title: Entrenamiento
+   description: Entrenamiento presencial en microsoft excel en niveles basico/ medio / avanzado o personalizado.
+   action: cotiza ya!
+   img: /img/logos/excel.png
+ - title: Presentaciones eficaces
+   description: Aprende como enviar mensajes poderosos mediante un uso correcto de office Power point
+   action: cotiza ya!
+   img: /img/logos/presentaciones.png
+
+
+
+   
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{data.title}} | {{front.title}}</title>
+	<meta name="description" content="{{data.description}}">
+	{{>head}}
+
+	<!-- CSS  -->
+	{{>style}}
+</head>
+<body>
+	{{>analytics}}
+	{{>nav}}
+
+	{{>main-img info=front.main-img}}
+	<div class="accent-light ">
+		<div class="container ">
+			<div class="row no-mar">
+				
+				{{#each front.products}}
+				<div class="col s12 l4 m6 ">
+					<div class="card">
+						<div class="card-image">
+							<img src="{{this.img}}">
+							<span class="card-title">{{this.title}}</span>
+						</div>
+						<div class="card-content">
+							<p>{{this.description}}</p>
+						</div>
+						<div class="card-action">
+							<a href="#">ver mas</a>
+							<a href="#">{{this.action}}</a>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+
+
+					
+				</div>
+			</div>
+		</div>
+		{{>footer}}
+		<script>
+			$(document).ready(function(){
+				$('.modal-trigger').leanModal();
+				$('select').material_select();
+				$("#nav-mobile").removeClass("hidden");
+
+				$('#extra-content1').slideUp(50);
+				$('#extra-content2').slideUp(50);
+				$('#extra-content3').slideUp(50);
+				$('#extra-content4').slideUp(50);
+				active('#extra-btn1','#extra-content1');
+			});
+		</script>	<script src="/js/min.js"></script>
+		{{>microdatos}}
+	</body>
+	</html>

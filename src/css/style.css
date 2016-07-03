@@ -170,7 +170,6 @@ div.main-img{
   overflow: hidden;
   position: relative; 
   width: 100%; /* for IE 6 */
-  background: url(/img/photo/aprendiendo.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -215,4 +214,7 @@ div.grayly{
   border-top-style: solid;
   border-bottom-width: 1px;
   border-top-width: 1px;
+}
+.no-mar{
+  margin:0;
 }
