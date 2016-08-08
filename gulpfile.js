@@ -59,7 +59,7 @@ gulp.task('build',   function () {
 gulp.task('build-watch', ['build'], browserSync.reload);
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages({'branch':'master', 'remoteUrl':'http://github.com/simulapro/simulapro.github.io.git'}));
+    .pipe(ghPages({'branch':'master', 'remoteUrl':'http://github.com/espractica/espractica.github.io.git'}));
 });
 //gulp.task('deploy', function() {
 //  return gulp.src('./dist/**/*')
