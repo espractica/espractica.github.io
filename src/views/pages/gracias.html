@@ -1,0 +1,51 @@
+---
+title: Gracias por tu accion
+
+main-img:
+    title: "Gracias"
+    subtitle: "acabas de enseñarnos algo valioso"
+    img: 	/img/icons/box-tile.png
+    repeat: true
+
+################### 
+#Navigation section
+###################
+nav:
+###################
+#main section
+###################
+description:
+    title: ¿Que ha sucedido?
+    text: Nos encontramos actualmente en fase de desarrollo de la plataforma, es por ello que tu accion no ha funcionado, sin embargo, es una valiosa contribucion para nosotros. si te inscribiste en alguno de nuestros formularios, pronto estaremos contactandote.
+---
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{data.title}} | {{front.title}}</title>
+	<meta name="description" content="{{data.description}}">
+	{{>head}}
+	<!-- CSS  -->
+	{{>style}}
+</head> 		
+<body>
+	{{>analytics}}
+	{{>general/nav info=front.nav}}
+
+	{{>main-img info=front.main-img}}
+
+	{{>landing/description-text info=front.description}}
+	{{>footer}}
+	<script>
+		$(document).ready(function(){
+			$('.modal-trigger').leanModal();
+			$('select').material_select();
+			$('.parallax').parallax();
+	    });
+	</script>
+	<script src="/js/min.js"></script>
+	{{>microdatos}}
+	{{>landing/registry-form}}
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="container">
+	<ul class="collection">
+		{{!collection item}}
+		{{#repeat 20}}
+	    <li class="collection-item avatar">
+	      <img src="{{faker "image" "business" "100" "100"}}" alt="" class="circle">
+	      <span class="title">Practica de {{faker "name" "jobArea"}}</span>
+	      <p>Empresa:  {{faker "company" "companyName"}} <br>
+	         Remunerado: si <br>
+	         Horario: oficina
+	      </p>
+	      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+	    </li> 
+	    {{/repeat}}
+	</ul>
+</div>

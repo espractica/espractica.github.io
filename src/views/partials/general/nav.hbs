@@ -1,0 +1,37 @@
+<header>
+		<nav>
+			<div class="nav-wrapper " data-spy="affix" data-offset-top="100">
+				{{!LOGO}}
+				<a id="logo-container" class="brand-logo"><object  type="image/svg+xml" data="{{data.logo-svg}}" height="50"><img height=59 src="{{data.logo-png}}" alt="{{data.title}} logo" ></object></a>
+				{{!NAVIGATION BUTTONS}}
+				<ul class="right hide-on-med-and-down ">
+					{{#each info}}
+						{{#unless this.btn}}
+							<li ><a class="accent-text" href="{{this.action}}">{{this.label}}</a></li>
+						{{else}}
+							<a id="landingBtn" class="btn accent {{#if modal}}modal-trigger{{/if}}" href="{{this.action}}">{{this.label}}</a> 
+						{{/unless}}
+					{{/each}}
+
+					
+				</ul>
+				{{!MOBILE NAVIGATION BUTTONS}}
+				<ul id="nav-mobile" class="side-nav"> 
+					{{#each info}}
+						{{#unless this.btn}}
+							<li ><a class="accent-text" href="{{../this.action}}">{{../this.label}}</a></li>
+						{{else}}
+							<a id="landingBtn" class="btn accent {{#if modal}}modal-trigger{{/if}}" href="{{../this.action}}">{{../this.label}}</a> 
+						{{/unless}}
+					{{/each}}
+				</ul>
+				<a href="#" data-activates="nav-mobile" class="button-collapse primary-text  "><i class="material-icons waves-effect waves-pink circle">menu</i></a>
+			</div>
+		</nav>
+</header>
+
+{{!productos Dropdown:}}
+ <ul id='dropdown-productos' class='dropdown-content'>
+    <li><a class="accent-text" href="/productos/waterpro.html">Ingenieria</a></li>
+    <li><a class="accent-text" href="/productos/negocios.html">Negocios</a></li>
+  </ul>

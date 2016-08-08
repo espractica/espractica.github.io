@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var hb = require('gulp-hb');
+var faker =require('faker');
+faker.locale="es"
 var csso = require('gulp-csso');
 var concat = require('gulp-concat');
 var csslint = require('gulp-csslint');
@@ -13,8 +15,9 @@ var htmlmin = require('gulp-htmlmin');
 var frontMatter = require('gulp-front-matter');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
+var ghPages = require('gulp-gh-pages');
+
 //var sourcemaps = require('gulp-sourcemaps');
-//var ghPages = require('gulp-gh-pages')
 
 function plumberit(errTitle) {
 return plumber({
@@ -45,12 +48,19 @@ gulp.task('build',   function () {
         .src('./src/views/pages/**/*.html')
         .pipe(plumberit('Build Error'))
         .pipe(frontMatter({property: 'data.front' }))
-        .pipe(hb({partials: './src/views/partials/**/*.hbs',data: './src/views/data.json',debug:0}))
-        //.pipe(htmlmin({collapseWhitespace: true,minifyCSS:true,minifyJS:true,removeComments:true}))
+        .pipe(hb({partials: './src/views/partials/**/*.hbs',data: './src/views/data.json',debug:0})
+        	.helpers({faker: function(group,name,p1,p2,p3){return faker[group][name](p1,p2,p3);}})
+            .helpers(require('handlebars-helpers'))
+            .helpers({repeat:function(n,block){var accum = '';for(var i = 0; i < n; ++i)accum += block.fn(i);return accum;}}))
+        .pipe(htmlmin({collapseWhitespace: true,minifyCSS:true,minifyJS:true,removeComments:true}))
         .pipe(gulp.dest('./dist'))
         //.pipe(browserSync.reload({ stream: false }));
 });
 gulp.task('build-watch', ['build'], browserSync.reload);
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages({'branch':'master', 'remoteUrl':'http://github.com/simulapro/simulapro.github.io.git'}));
+});
 //gulp.task('deploy', function() {
 //  return gulp.src('./dist/**/*')
 //    .pipe(ghPages({'branch':'master'}));
@@ -119,6 +129,7 @@ gulp.task('font', function () {
         .pipe(gulp.dest('./dist/font'))
         .pipe(browserSync.reload({ stream: true }));
 });
+
 /*///////////////////////////////////////
 RELOAD YOUR BROWSER
 ///////////////////////////////////////*/
@@ -127,11 +138,21 @@ gulp.task('bs-reload', function () {
 });
 
 /*///////////////////////////////////////
+copy root folder
+///////////////////////////////////////*/
+gulp.task('root', function () {
+    return gulp.src('./src/root/**/*')
+        .pipe(gulp.dest('./dist/'))
+        .pipe(browserSync.reload({ stream: true }));
+});
+/*///////////////////////////////////////
 WATCHER
 ///////////////////////////////////////*/
 gulp.task('default', ['browser-sync','js','css','build','svg','img'], function () {
 	gulp.watch(['./src/js/*.js'],   ['js','jslint']);
+    gulp.watch(['./src/font/*'],   ['js','jslint']);
 	gulp.watch('./src/**/*.css',  ['css','csslint']);
+    gulp.watch('./src/root/*',  ['browser-sync','root']);
 	//gulp.watch('./dist/**/*.html', ['bs-reload']);
 	gulp.watch(['./src/views/**/*'], ['build-watch']);
 	gulp.watch('./src/img/**/*.svg', ['svg']);

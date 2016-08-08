@@ -1,0 +1,35 @@
+<div class="parallax-container valign-wrapper hide-on-small-only">
+      	<div class="parallax"><img alt="landing {{info.title}} heroshot" src="{{info.img}}.jpg"></div> 
+      	<div class="container container-90">
+	    	<div class="row valign	left-align ">
+				<div class="col s12 l6 m7 dark ">
+	    			<h1 class="white-text center">{{{info.title}}}</h1>
+	    			<h2 class="thin white-text center">{{{info.subtitle}}}</h2>
+	    			<div class="row center">
+	    				<a class="btn white accent-text {{#if modal}}modal-trigger{{/if}}"  href="{{info.btn1.action}}">{{info.btn1.label}}</a>
+						{{#if info.btn2}}
+	    				<a href="{{info.btn2.action}}" class="btn accent    ">{{info.btn2.label}}</a>
+	    				{{/if}}
+	    			</div>
+	    		</div>
+			</div>
+		</div>
+    </div>
+    {{!MAIN mobile-no-parallax}}
+    <div id="no-parallax" class="parallax-container valign-wrapper hide-on-med-and-up">
+      	<div class="no-parallax"></div> 
+      	<div class="container container-90">
+	    	<div class="row valign	left-align ">
+				<div class="col s12 l6 m7 dark-80 ">
+	    			<h1 class="white-text center">{{{info.title}}}</h1>
+	    			<p  class="thin white-text center flow-text">{{{info.subtitle}}}</p>
+	    			<div class="row center">
+	    				<a class="    btn white accent-text {{#if modal}}modal-trigger{{/if}}"  href="{{info.btn1.action}}">{{info.btn1.label}}</a>
+	    				{{#if info.btn2}}
+	    				<a href="{{info.btn2.action}}" class="btn accent    ">{{info.btn2.label}}</a>
+	    				{{/if}}
+	    			</div>
+	    		</div>
+			</div>
+		</div>
+    </div>

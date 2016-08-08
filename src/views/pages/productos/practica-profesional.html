@@ -1,0 +1,60 @@
+---
+title: Encuentra tu practica profesional!
+parallax: /img/photo/aprendiendo
+###################
+#main section
+###################
+hero:
+    title: "Obten tu practica profesional deseada"
+    subtitle: "Dejanos tus datos de contacto y la practica que deseas y la encontraremos por ti"
+    img: /img/photo/aprendiendo
+    btn1: 
+        label: "Inscribete ya!"
+        action: "#registry"
+        type: "text"
+        modal: false
+################### 
+#Navigation section
+###################
+nav:
+ - action: #registry
+   btn: true
+   label: Inscribete ya!
+###################
+#main section
+###################
+description:
+    title: ¿Quienes somos?
+    text: Nos dedicamos a mejorar la educacion universitaria mediante herramientas digitales, ¿Crees que podemos ofrecer ayuda a tu universidad? haz click aqui para conocer nuestra oferta para instituciones o envianos los datos de tu institucion. 
+---
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{data.title}} | {{front.title}}</title>
+	<meta name="description" content="{{data.description}}">
+	{{>head}}
+	<!-- CSS  -->
+	{{>style}}
+</head> 		
+<body>
+	{{>analytics}}
+	{{>general/nav info=front.nav}}
+	{{>landing/hero-shot-two-btns info=front.hero}}
+	{{>landing/description-text info=front.description}}
+
+	<iframe id="registry" src="https://docs.google.com/forms/d/e/1FAIpQLScvxLrcbfpk3BMNfSC8vyHOyDwA-4wUutB-xWqokJeA_SNP8Q/viewform?embedded=true" width="100%" height="3200px" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+	{{>footer}}
+	<script>
+		$(document).ready(function(){
+			$('.modal-trigger').leanModal();
+			$('select').material_select();
+			$('.parallax').parallax();
+	    });
+	</script>
+	<script src="/js/min.js"></script>
+	{{>microdatos}}
+	{{>landing/registry-form}}
+</body>
+</html>

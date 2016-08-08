@@ -2,18 +2,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
 {{!Autor en google}}
 <link rel="author" href="{{data.google-plus}}" />
-<!--web sharing-->
-	<link href="{{data.share-img}}" rel="image_src" />
-	<!--TWITTER CARD-->
+{{!--web sharing--}}
+	{{#if front.share-img}}
+		<link href="{{front.share-img}}" rel="image_src" />
+	{{else}}
+		<link href="{{data.share-img}}" rel="image_src" />
+	{{/if}}
+
+	{{!--TWITTER CARD--}}
 	<meta name="twitter:card" content="summary_large_image" />
-	<!--OPEN GRAPH-->
-	<meta property="og:title" content="{{data.share-title}}" />
+	{{!--OPEN GRAPH--}}
+	
+	{{#if front.share-description}}
+		<meta property="og:title" content="{{data.share-title}}" />
+	{{else}}
+		<meta property="og:title" content="{{front.share-title}}" />
+	{{/if}}
 	<meta property="og:type" content="Website" />
-	<meta property="og:description" content="{{data.share-description}}" />
-	<meta property="og:url" content="{{data.url}}" />
-	<meta property="og:site_name" content="{{data.share-title}}" />
-	<meta property="og:image" content="{{data.share-img}}" />
-	<!--manifest-->
+	
+	
+
+	{{#if front.share-description}}
+		<meta property="og:description" content="{{front.share-description}}" />
+	{{else}}
+		<meta property="og:description" content="{{data.share-description}}" />
+	{{/if}}
+
+	{{#if front.share-url}}
+		<meta property="og:url" content="{{front.share-url}}" />
+	{{else}}
+		<meta property="og:url" content="{{data.url}}" />
+	{{/if}}
+
+	{{#if front.share-title}}
+		<meta property="og:site_name" content="{{front.share-title}}" />
+	{{else}}
+		<meta property="og:site_name" content="{{data.share-title}}" />
+	{{/if}}
+
+	{{#if front.share-img}}
+		<meta property="og:image" content="{{front.share-img}}" />
+	{{else}}
+		<meta property="og:image" content="{{data.share-img}}" />
+	{{/if}}
+	{{!--manifest--}}
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">

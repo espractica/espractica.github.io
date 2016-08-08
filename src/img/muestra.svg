@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Capa_1"
+   x="0px"
+   y="0px"
+   viewBox="36.9 512.2 848.82696 146.9777"
+   enable-background="new 36.9 512.2 612 147.1"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="muestra.svg"
+   width="848.82697"
+   height="146.97771"><metadata
+   id="metadata79"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs77" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1280"
+   inkscape:window-height="971"
+   id="namedview75"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="0.86424162"
+   inkscape:cx="-245.98629"
+   inkscape:cy="173.74948"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Capa_1" />
+<path
+   d="m 110.60888,512.2 c -40.594886,0 -73.598858,32.89396 -73.598858,73.48885 0,40.59489 32.893959,73.48885 73.488858,73.48885 40.59488,0 73.48885,-32.89396 73.48885,-73.48885 0,-40.59489 -32.78395,-73.48885 -73.37885,-73.48885 z m 45.98554,85.04024 c -6.27075,24.97301 -31.90384,39.93481 -57.316902,33.55404 -25.41306,-6.38076 -40.924929,-31.79382 -34.654174,-56.65682 6.270756,-24.97301 31.903843,-39.93481 57.316906,-33.55404 25.41306,6.38077 40.92493,31.68381 34.65417,56.65682 z"
+   id="path3"
+   inkscape:connector-curvature="0"
+   style="fill:#3f5fff" />
+
+
+<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="36.8545"
+   y1="576.28442"
+   x2="148.2791"
+   y2="576.28442"
+   gradientTransform="matrix(1.1001325,0,0,1.1001325,-3.694889,-51.287868)">
+	<stop
+   offset="0"
+   style="stop-color:#FFFFFF;stop-opacity:0"
+   id="stop62" />
+	<stop
+   offset="1"
+   style="stop-color:#7FDBFF"
+   id="stop64" />
+</linearGradient>
+<path
+   d="m 114.67938,516.71054 c -13.20159,-3.30039 -26.513199,-1.54018 -38.394631,4.07049 -23.432822,12.32149 -39.384747,36.85444 -39.384747,65.12784 0,12.65153 3.19039,24.53296 8.80106,34.87421 0.11002,0.22002 0.22003,0.33004 0.33004,0.55006 0,0.11001 0.11002,0.22003 0.11002,0.22003 7.810937,13.20159 20.132421,23.21279 35.424263,27.06326 32.673935,8.25099 66.448005,-14.63177 75.689115,-51.15616 9.24111,-36.5244 -9.90119,-72.49874 -42.57512,-80.74973 z m 41.91504,80.41969 c -6.27075,24.973 -31.90384,39.93481 -57.316902,33.55404 -25.41306,-6.38077 -40.924929,-31.79383 -34.654174,-56.65683 6.270756,-24.973 31.903843,-39.9348 57.316906,-33.55404 25.41306,6.38077 40.92493,31.68382 34.65417,56.65683 z"
+   id="path66"
+   style="fill:url(#SVGID_1_)"
+   inkscape:connector-curvature="0" />
+<linearGradient
+   id="SVGID_2_"
+   gradientUnits="userSpaceOnUse"
+   x1="59.889702"
+   y1="581.34521"
+   x2="170.67641"
+   y2="581.34521"
+   gradientTransform="matrix(1.1001325,0,0,1.1001325,-3.694889,-51.287868)">
+	<stop
+   offset="0"
+   style="stop-color:#5558FF"
+   id="stop69" />
+	<stop
+   offset="1"
+   style="stop-color:#FFFFFF;stop-opacity:0"
+   id="stop71" />
+</linearGradient>
+<path
+   d="m 166.27559,537.83308 c -7.15086,-7.15086 -16.06193,-12.54151 -26.29317,-15.0718 -32.67393,-8.14099 -66.448002,14.52174 -75.579101,50.7161 -9.131101,36.19436 10.011205,72.16869 42.575131,80.30967 17.82215,4.51054 36.08435,-0.33004 50.38607,-11.44137 16.28195,-13.53163 26.73321,-33.88409 26.73321,-56.65683 0,-18.2622 -6.7108,-34.98421 -17.82214,-47.85577 z m -9.68117,59.40716 c -6.27075,24.97301 -31.90384,39.93481 -57.316902,33.55404 -25.41306,-6.38076 -40.924929,-31.79382 -34.654174,-56.65682 6.270756,-24.97301 31.903843,-39.93481 57.316906,-33.55404 25.41306,6.38077 40.92493,31.68381 34.65417,56.65682 z"
+   id="path73"
+   style="fill:url(#SVGID_2_)"
+   inkscape:connector-curvature="0" />
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.30105591px;line-height:125%;font-family:'Small Fonts';-inkscape-font-specification:'Small Fonts';letter-spacing:0px;word-spacing:0px;fill:#3f5fff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+   x="188.21504"
+   y="590.84906"
+   id="text3407"
+   sodipodi:linespacing="125%"
+   transform="scale(0.9884439,1.0116912)"><tspan
+     sodipodi:role="line"
+     id="tspan3409"
+     x="188.21504"
+     y="590.84906"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic';fill:#3f5fff;fill-opacity:1;"><tspan
+   style="fill:#3f5fff;fill-opacity:1;"
+   id="tspan4229"><tspan
+   style="fill:#000000"
+   id="tspan4231">esPractica</tspan>.</tspan>com</tspan></text>
+
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:39.78330231px;line-height:125%;font-family:'Small Fonts';-inkscape-font-specification:'Small Fonts';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   x="194.1973"
+   y="631.12274"
+   id="text3407-7"
+   sodipodi:linespacing="125%"
+   transform="scale(0.9884439,1.0116912)"><tspan
+     sodipodi:role="line"
+     id="tspan3409-6"
+     x="194.1973"
+     y="631.12274"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic'">portal de recursos para universitarios</tspan></text>
+
+</svg>

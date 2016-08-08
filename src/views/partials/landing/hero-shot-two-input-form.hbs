@@ -1,0 +1,31 @@
+{{!MAIN INFORMATION}}
+	{{!MAIN parallax}}
+	<div class="parallax-container valign-wrapper">
+      	<div class="parallax"><img alt="landing {{info.title}} heroshot" src="{{info.img}}.jpg"></div> 
+      	<div class="container container-90">
+	    	<div class="row valign	left-align ">
+				<div class="col s12 l12 m12 dark ">
+	    			<h1 class="white-text center">{{{info.title}}}</h1>
+	    			<h2 class="thin white-text center">{{{info.subtitle}}}</h2>
+	    			<div class="input-field col s12 l6">
+			        	<input id="job" type="{{info.input1.type}}" class="validate white">
+			        	<label for="job">{{info.input1.label}}</label>
+			        </div>
+			        <div class="input-field col s12 l6">
+			        	<input id="job" type="{{info.input2.type}}" class="validate white">
+			        	<label for="job">{{info.input2.label}}</label>
+			        </div>
+	    			<div class="row center">
+	    				<a class="btn white accent-text modal-trigger"  href="{{info.btn.action}}">{{info.btn.label}}</a>
+	    			</div>
+	    			{{#if info.extra}}
+	    			<div class="row hide-on-small-only no-mar">
+	    				<div class="col">
+	    					<span class="thin white-text">{{info.extra}}</p>
+	    				</div>
+	    			</div>
+	    			{{/if}}
+	    		</div>
+			</div>
+		</div>
+    </div>
