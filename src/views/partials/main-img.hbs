@@ -1,4 +1,5 @@
-<div class="main-img"  style="background: url({{info.img}}) {{#unless info.repeat}}no-{{/unless}}repeat center center;">
+<div class="main-img"  style="
+background: url({{info.img}}) {{#unless info.repeat}}no-{{/unless}}repeat center center; {{#if info.cover}}background-size: cover;{{/if}}">
 	<div class="text">
 		<h1 class="white-text">{{info.title}}</h1>
 		<h2 class="white-text flow-text">{{info.subtitle}}</h2>

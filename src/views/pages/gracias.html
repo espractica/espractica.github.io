@@ -4,8 +4,9 @@ title: Gracias por tu accion
 main-img:
     title: "Gracias"
     subtitle: "acabas de enseñarnos algo valioso"
-    img: 	/img/icons/box-tile.png
-    repeat: true
+    img: 	/img/photo/thanks2.jpg
+    repeat: false
+    cover: true
 
 ################### 
 #Navigation section
@@ -41,7 +42,7 @@ description:
 		$(document).ready(function(){
 			$('.modal-trigger').leanModal();
 			$('select').material_select();
-			$('.parallax').parallax();
+			$('.parallax').parallax({height:700});
 	    });
 	</script>
 	<script src="/js/min.js"></script>
