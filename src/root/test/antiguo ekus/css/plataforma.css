@@ -1,0 +1,30 @@
+#main-canvas{
+	text-align: center;
+	position: relative;
+	
+}
+#main-board{
+	overflow-x: auto;
+	text-align: center;
+}
+html, body{
+	background-color: white;
+}
+.drop-img {
+	left: 10px;
+	top:  10px;
+	width: 32px;
+}
+.pieces{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.hoverable{
+	z-index: 0;
+}
+.hoverable:hover{
+	z-index: -
+		
+		1;
+}
+
