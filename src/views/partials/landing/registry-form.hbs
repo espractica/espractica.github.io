@@ -1,44 +1,48 @@
 <div id="registry-modal" class="modal">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScKn188wS587XQGXNBdGASzPmMuS3BaZ8yYrBU2y4l9oYh-3g/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=!0">
 	<div class="modal-content">
 		<h3>Pide  una demo:</h3>
 		<p class="flow-text">Para solicitar la demo de {{#if info.title}}{{info.title}}{{else}}alguno de nuestros productos{{/if}} introduce los siguientes datos:</p>
 		<div class="row">
 			<div class="input-field col s12 m12 l12">
-				<input id="name" type="text" class="validate">
+				<input name="entry.111435815" id="name" type="text" class="validate">
 				<label for="name">Nombre completo</label>
 			</div>
-			<div class="input-field col s12 m12 l12">
-				<input id="name" type="text" class="validate">
-				<label for="name">email institucional</label>
+			<div  class="input-field col s12 m12 l12">
+				<input name="entry.2065099183" id="email" type="text" class="validate">
+				<label for="email">email institucional</label>
 			</div>
 
-			<div class="input-field col s12 m12 l6 ">
+			<div name="entry.1165829033" class="input-field col s12 m12 l6 ">
 				<select class="browser-default">
 					<option value="" disabled selected>Profesion</option>
-					<option value="1">Docente</option>
-					<option value="2">Consultor</option>
-					<option value="3">Empleado</option>
-					<option value="3">Directivo</option>
+					<option value="docente">Docente</option>
+					<option value="consultor">Consultor</option>
+					<option value="empleado">Empleado</option>
+					<option value="directivo">Directivo</option>
 				</select>
 			</div>
-			<div class="input-field col s12 m12 l6 ">
-				<select class="browser-default">
+			<div  class="input-field col s12 m12 l6 ">
+				<select name="entry.716759906" class="browser-default">
 					<option value="" disabled selected>Carrera</option>
-					<option value="1">Ing. Civil</option>
-					<option value="2">Ing. Ambiental/Sanitaria</option>
-					<option value="3">Administración</option>
-					<option value="3">Otra</option>
+					<option value="civil">Ing. Civil</option>
+					<option value="ambiental">Ing. Ambiental/Sanitaria</option>
+					<option value="admin">Administración</option>
+					<option value="otra">Otra</option>
 				</select>
 			</div>
 			<div class="row">
 				<div class="input-field col s12">
-					<textarea id="textarea1" class="materialize-textarea"></textarea>
+					<textarea name="entry.77933250" id="textarea1" class="materialize-textarea"></textarea>
 					<label for="textarea1">Tienes Alguna duda o petición en especial? (opcional)</label>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="modal-footer">
-		<a href="#!" class=" modal-action modal-close     btn-flat primary-text">Enviar</a>
+		<input type="submit" name="submit" value="Enviar" class="accent white-text modal-action modal-close   btn-flat ">
 	</div>
+</form>
 </div>
+<script type="text/javascript">var submitted=!1</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none" onload="submitted&amp;&amp;(window.location=&quot;/gracias.html&quot;)"></iframe>

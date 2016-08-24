@@ -1,7 +1,4 @@
 ---
-###################
-#main information
-###################
 title: WaterPro 
 description: Simulador de Ingeniería en aguas residuales 
 parallax: /img/photo/water 
@@ -42,10 +39,10 @@ description3: Incluye todas las fases en la elaboración y ejecución de un proy
 extra-title: Alcances del simulador
 extra-content1: 'Tus estudiantes se verán retados a manejar adecuadamente el tiempo y los recursos asignados dentro de nuestros casos de simulación:
 
-<h5 class="accent-text">Tiempo:</h5> <p class="flow-text">En la vida real, la planeacion y la toma de decisiones efectiva es clave, los estudiantes deberan decidir que pruebas o ensayos comprar y en que momento, teniendo en cuenta que su entrega no es instantanea.</p>
+<h5 class="accent-text">Tiempo:</h5> <p class="flow-text">En la vida real, la planeación y la toma de decisiones efectiva es clave, los estudiantes deberán decidir que pruebas o ensayos comprar y en qué momento, teniendo en cuenta que su entrega no es instantánea.</p>
 
-<h5 class="accent-text">Inversión:</h5> <p class="flow-text">Los estudiantes comienzan con un presupuesto limitado para ejecutar pruebas y realizar estudios. asi, antes de tomar cada decision deberan conocer los conceptos relacionados y la informacion que cierta inversión puede proveer,<span class="accent-text">un verdadero aprendizaje aplicado</span></p>'
-extra-content2: 'Será la oportunidad perfecta para que tus estudiantes aprendan o demuestren habilidades en el diseño de plantas de tratamiento, en waterPRO, los estudiantes podran aprender los pros y cons, asi como metodologias de diseño de:
+<h5 class="accent-text">Inversión:</h5> <p class="flow-text">Los estudiantes comienzan con un presupuesto limitado para ejecutar pruebas y realizar estudios. así, antes de tomar cada decisión deberán conocer los conceptos relacionados y la información que cierta inversión puede proveer, <span class="accent-text">un verdadero aprendizaje aplicado</span></p>'
+extra-content2: 'Será la oportunidad perfecta para que tus estudiantes aprendan o demuestren habilidades en el diseño de plantas de tratamiento, en waterPRO, los estudiantes podrán aprender los pros y contras, así como metodologías de diseño de:
 
 <ul>
 	<li class="flow-text">Unidades de pretratamiento</li>
@@ -55,17 +52,17 @@ extra-content2: 'Será la oportunidad perfecta para que tus estudiantes aprendan
 	<li class="flow-text">Manejo de lodos</li>
 </ul>
 '
-extra-content3: 'En waterPRO, los estudiantes (o equipos) pueden competir entre si por un ranking, que se medira en base a las buenas o malas decisiones que tomen, Esto permite generar un sano ambiente competitivo y a su ves aumenta el interes del estudiante por participar.
+extra-content3: 'En waterPRO, los estudiantes (o equipos) pueden competir entre sí por un ranking, que se medirá en base a las buenas o malas decisiones que tomen, Esto permite generar un sano ambiente competitivo y a su vez aumenta el interés del estudiante por participar.
 
-<span class="accent-text">Has que tus estudiantes compitan entre sí para que sientan el mundo profesional cada vez más cerca!.</span>'
+<span class="accent-text">Has que tus estudiantes compitan entre sí para que sientan el mundo profesional cada vez más cerca! </span>'
 
-extra-content4: 'Los grandes ingenieros son artistas en la elaboracion de proyectos. con el simulador, podras enseñarle los procesos clave de la planeación, tales como:
+extra-content4: 'Los grandes ingenieros son artistas en la elaboración de proyectos. con el simulador, podrás enseñarle los procesos clave de la planeación, tales como:
 
 <ul>
 	<li class="flow-text">Identificación de problemas</li>
 	<li class="flow-text">Analisis de alternativas</li>
 	<li class="flow-text">Elaboracion de presupuestos</li>
-	<li class="flow-text">Legislación nacional y estandares internacionales</li>
+	<li class="flow-text">Legislación nacional y estándares internacionales</li>
 </ul>'
 
 extra-btn1: Administración
@@ -77,21 +74,21 @@ extra-btn4: Proyectos
 #Quote section
 ###################
 quote:
-    quote: Dime y olvidaré. Enseñame y recordaré. Envuélveme y aprenderé.
+    quote: Dime y olvidaré. Enséñame y recordaré. Envuélveme y aprenderé.
     autor: Benjamin Franklin
     img: /img/photo/city2
-    btn: Cotiza ya!
+    btn: ¡Cotiza ya!
 ---
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>    
 	<meta charset="UTF-8">
 	<title>{{data.title}} | {{front.title}} | {{front.description}}</title>
 	<meta name="description" content="{{data.description}}">
 	{{>head}}
 	{{>style}}
 </head>
-<body>
+<body> 
 	{{>analytics}} 
 	{{>nav-landing}}
 	{{!MAIN INFORMATION}}
@@ -103,6 +100,8 @@ quote:
     {{>landing/advantages1}}
 	{{!EXTRA SECTION}} 
 	{{>landing/advantages2}}
+	{{!aliados}}
+	{{>general/aliados}}
 	{{!QUOTE SECTION}}
 	{{>landing/quote info=front.quote}}
     {{!INSCRIPTION MODAL}}

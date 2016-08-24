@@ -1,0 +1,149 @@
+---
+title: Encuentra tu practica profesional!
+
+###################
+#main section
+###################
+main-img:
+    title: "Obten tu practica profesional deseada"
+    subtitle: "Contamos con mas de 300.000 opciones de practicas a nivel nacional, revisa:"
+    img: /img/photo/aprendiendo
+    input1: 
+        label: "Area de la practica"
+        placeholder: ""
+        type: "text"
+    input2: 
+        label: "Lugar"
+        placeholder: ""
+        type: "text"
+    btn:
+        label: "Buscar YA!" 
+        action: ""
+        type: ""
+    extra: "Buscando practicantes? click aqui"
+################### 
+#Navigation section
+###################
+nav:
+ - action: WaterPro
+   label: Empresas
+ - action: WaterPro
+   label: Universidades
+ - action: 
+   btn: true
+   label: Estudiantes
+###################
+#main section
+###################
+description:
+    title: ¿Quienes somos?
+    text: Nos dedicamos a mejorar la educacion universitaria mediante herramientas digitales, ¿Crees que podemos ofrecer ayuda a tu universidad? haz click aqui para conocer nuestra oferta para instituciones o envianos los datos de tu institucion. 
+
+###################
+#Extra section
+###################
+
+extra-title: Productos
+extra-content1: "<h3 class='accent white-text btn' style='margin:0px;'>WaterPRO:</h3>
+<p class='flow-text'>Simulador de diseño y gestión de proyectos de ingeniería en aguas residuales, donde tus estudiantes pueden aprender y poner a prueba los conocimientos en las areas de diseño, toma de decisiones y presupuestos.
+<br>
+El simulador se puede aplicar para estudiantes de pregrado y posgrado de: 
+<ul>
+	<li class='flow-text'>Ingeniería Civil</li>
+	<li class='flow-text'>Ingeniería Ambiental</li>
+	<li class='flow-text'>Ingeniería Sanitaria</li>
+	<li class='flow-text'>Arquitectura</li>
+	<li class='flow-text'>Carreras afines</li>
+</ul>
+</p>"
+extra-content2: "Simuladores donde los estudiantes de carreras administrativas pueden ejercitarse o desafiar sus conocimientos en áreas como:
+<ul>
+	<li class='flow-text'>Administración y gestión del tiempo y los recursos</li>
+	<li class='flow-text'>Distribución física internacional</li>
+	<li class='flow-text'>Crear y administrar una empresa desde cero</li>
+	<li class='flow-text'>Gestionar una cadena hotelera</li>
+</ul>"
+extra-content3: Únete al movimiento verde desde la educación, imagina que fueras quien decida en el futuro energético del país; con nuestro simulador de sostenibilidad puedes ver que tal sería si así fuera.
+extra-content4: Si nuestros casos de simulación no se adaptan a lo que buscas, podemos hacer un caso de simulación que se ajuste a tus necesidades.
+extra-btn1: <img class="product responsive-img" src="/img/icons/helmet2.svg" alt="helmet">  Ingeniería 
+extra-btn2: <img class="product responsive-img" src="/img/icons/money2.svg" alt="money"> Negocios 
+extra-btn3: <img class="product responsive-img" src="/img/icons/micro.svg" alt="microphone"> Sostenibilidad
+extra-btn4: <img class="product responsive-img" src="/img/icons/wrench2.svg" alt="microphone"> Personalizado
+---
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{data.title}} | {{front.title}}</title>
+	<meta name="description" content="{{data.description}}">
+	{{>head}}
+	<!-- CSS  -->
+	{{>style}}
+	<style>	
+		.input-field label.active {
+
+		    -webkit-transform: translateY(-160%);
+		    transform: translateY(-160%);
+		}
+	</style> 
+</head> 		
+<body>
+	{{>analytics}}
+	{{>general/nav info=front.nav}}
+	{{>landing/hero-shot-two-input-form info=front.main-img}}
+	{{>landing/description-text info=front.description}}
+	{{!>test/busqueda-practica-1}}
+	
+	{{!--<div class="white">
+	{{>landing/extra-info}}
+	</div>--}}
+	{{>footer}}
+	<script>
+		$(document).ready(function(){
+			$('.modal-trigger').leanModal();
+			$('select').material_select();
+			$("#nav-mobile").removeClass("hidden");
+
+			$('#extra-content1').slideUp(50);
+			$('#extra-content2').slideUp(50);
+			$('#extra-content3').slideUp(50);
+			$('#extra-content4').slideUp(50);
+			active('#extra-btn1','#extra-content1');
+	    });
+		$('#extra-btn1, #extra-mini-btn1').click(function(){
+			inactive();
+			active('#extra-btn1','#extra-content1');
+		})
+		$('#extra-btn2, #extra-mini-btn2').click(function(){
+			inactive();
+			active('#extra-btn2','#extra-content2');
+		})
+		$('#extra-btn3, #extra-mini-btn3').click(function(){
+			inactive();
+				active('#extra-btn3','#extra-content3');
+		})
+		$('#extra-btn4, #extra-mini-btn4').click(function(){
+			inactive();
+				active('#extra-btn4','#extra-content4');
+		})
+		var activeTap='#extra-content1';
+		var inactive= function(){
+			$('#extra-btn1').removeClass('active');
+			$('#extra-btn2').removeClass('active');
+			$('#extra-btn3').removeClass('active');
+			$('#extra-btn4').removeClass('active');
+		}
+		var active= function(btn,content){
+			$(btn).addClass('active');
+			$(activeTap).fadeOut(100,function(){$(content).fadeIn(100)});
+
+			activeTap = content;
+		}
+		$('.parallax').parallax();
+	</script>
+	<script src="/js/min.js"></script>
+	{{>microdatos}}
+	{{>landing/registry-form}}
+</body>
+</html>

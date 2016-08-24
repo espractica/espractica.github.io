@@ -1,51 +1,26 @@
 ---
-title: Encuentra tu practica profesional!
+title: principal
+
+main-img:
+    title: "esPractica"
+    subtitle: Creamos mejores experiencias de aprendizaje
+    img: /img/photo/aprendiendo.jpg
 
 ###################
 #main section
 ###################
-main-img:
-    title: "Obten tu practica profesional deseada"
-    subtitle: "Contamos con mas de 300.000 opciones de practicas a nivel nacional, revisa:"
-    img: /img/photo/aprendiendo
-    input1: 
-        label: "Area de la practica"
-        placeholder: ""
-        type: "text"
-    input2: 
-        label: "Lugar"
-        placeholder: ""
-        type: "text"
-    btn:
-        label: "Buscar YA!" 
-        action: ""
-        type: ""
-    extra: "Buscando practicantes? click aqui"
-################### 
-#Navigation section
-###################
-nav:
- - action: WaterPro
-   label: Empresas
- - action: WaterPro
-   label: Universidades
- - action: 
-   btn: true
-   label: Estudiantes
-###################
-#main section
-###################
-description:
-    title: ¿Quienes somos?
-    text: Nos dedicamos a mejorar la educacion universitaria mediante herramientas digitales, ¿Crees que podemos ofrecer ayuda a tu universidad? haz click aqui para conocer nuestra oferta para instituciones o envianos los datos de tu institucion. 
+main-title: ¿Quiénes somos?
+main-text: Nos dedicamos a brindar servicios de formación y entrenamiento a empresas y universidades, por medio de Simuladores de última generación y conferencias online y offline. <br><br>¿Necesitas un simulador para tu institución hecho a medida? También ofrecemos opciones de desarrollo.
 
 ###################
 #Extra section
 ###################
 
+
+
 extra-title: Productos
 extra-content1: "<h3 class='accent white-text btn' style='margin:0px;'>WaterPRO:</h3>
-<p class='flow-text'>Simulador de diseño y gestión de proyectos de ingeniería en aguas residuales, donde tus estudiantes pueden aprender y poner a prueba los conocimientos en las areas de diseño, toma de decisiones y presupuestos.
+<p class='flow-text'>Simulador de diseño y gestión de proyectos de ingeniería en aguas residuales, donde tus estudiantes pueden aprender y poner a prueba los conocimientos en las áreas de diseño, toma de decisiones y presupuestos.
 <br>
 El simulador se puede aplicar para estudiantes de pregrado y posgrado de: 
 <ul>
@@ -71,7 +46,7 @@ extra-btn3: <img class="product responsive-img" src="/img/icons/micro.svg" alt="
 extra-btn4: <img class="product responsive-img" src="/img/icons/wrench2.svg" alt="microphone"> Personalizado
 ---
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -80,68 +55,68 @@ extra-btn4: <img class="product responsive-img" src="/img/icons/wrench2.svg" alt
 	{{>head}}
 	<!-- CSS  -->
 	{{>style}}
-	<style>	
-		.input-field label.active {
-
-		    -webkit-transform: translateY(-160%);
-		    transform: translateY(-160%);
-		}
-	</style> 
 </head> 		
 <body>
 	{{>analytics}}
-	{{>general/nav info=front.nav}}
-	{{>landing/hero-shot-two-input-form info=front.main-img}}
-	{{>landing/description-text info=front.description}}
-	{{!>test/busqueda-practica-1}}
-	
-	{{!--<div class="white">
+	{{>nav}}
+
+	{{>main-img info=front.main-img}}
+	<div class="accent-light">
+		<div class="container ">
+			<div class="row ">
+				<div class="col s12 l12 m12 ">
+					<h3 class="center">{{front.main-title}}</h3>
+					<p class="flow-text">{{{front.main-text}}} </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="white">
+
 	{{>landing/extra-info}}
-	</div>--}}
+	</div>
 	{{>footer}}
 	<script>
-		$(document).ready(function(){
-			$('.modal-trigger').leanModal();
-			$('select').material_select();
-			$("#nav-mobile").removeClass("hidden");
+	$(document).ready(function(){
+		$('.modal-trigger').leanModal();
+		$('select').material_select();
+		$("#nav-mobile").removeClass("hidden");
 
-			$('#extra-content1').slideUp(50);
-			$('#extra-content2').slideUp(50);
-			$('#extra-content3').slideUp(50);
-			$('#extra-content4').slideUp(50);
-			active('#extra-btn1','#extra-content1');
-	    });
-		$('#extra-btn1, #extra-mini-btn1').click(function(){
-			inactive();
-			active('#extra-btn1','#extra-content1');
-		})
-		$('#extra-btn2, #extra-mini-btn2').click(function(){
-			inactive();
-			active('#extra-btn2','#extra-content2');
-		})
-		$('#extra-btn3, #extra-mini-btn3').click(function(){
-			inactive();
-				active('#extra-btn3','#extra-content3');
-		})
-		$('#extra-btn4, #extra-mini-btn4').click(function(){
-			inactive();
-				active('#extra-btn4','#extra-content4');
-		})
-		var activeTap='#extra-content1';
-		var inactive= function(){
-			$('#extra-btn1').removeClass('active');
-			$('#extra-btn2').removeClass('active');
-			$('#extra-btn3').removeClass('active');
-			$('#extra-btn4').removeClass('active');
-		}
-		var active= function(btn,content){
-			$(btn).addClass('active');
-			$(activeTap).fadeOut(100,function(){$(content).fadeIn(100)});
+		$('#extra-content1').slideUp(50);
+		$('#extra-content2').slideUp(50);
+		$('#extra-content3').slideUp(50);
+		$('#extra-content4').slideUp(50);
+		active('#extra-btn1','#extra-content1');
+    });
+	$('#extra-btn1, #extra-mini-btn1').click(function(){
+		inactive();
+		active('#extra-btn1','#extra-content1');
+	})
+	$('#extra-btn2, #extra-mini-btn2').click(function(){
+		inactive();
+		active('#extra-btn2','#extra-content2');
+	})
+	$('#extra-btn3, #extra-mini-btn3').click(function(){
+		inactive();
+			active('#extra-btn3','#extra-content3');
+	})
+	$('#extra-btn4, #extra-mini-btn4').click(function(){
+		inactive();
+			active('#extra-btn4','#extra-content4');
+	})
+	var activeTap='#extra-content1';
+	var inactive= function(){
+		$('#extra-btn1').removeClass('active');
+		$('#extra-btn2').removeClass('active');
+		$('#extra-btn3').removeClass('active');
+		$('#extra-btn4').removeClass('active');
+	}
+	var active= function(btn,content){
+		$(btn).addClass('active');
+		$(activeTap).fadeOut(100,function(){$(content).fadeIn(100)});
 
-			activeTap = content;
-		}
-		$('.parallax').parallax();
-	</script>
+		activeTap = content;
+	}</script>
 	<script src="/js/min.js"></script>
 	{{>microdatos}}
 	{{>landing/registry-form}}
